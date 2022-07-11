@@ -33,10 +33,10 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🤖Salam Mən [K.M Tag Bot](http://t.me/KMTagBot)-U.**\n**Qrupunuzdakı Demək olar ki, Bütün Üzvləri Tag Edə Bilərəm.\n🤖Əmrlər üçün======> /help yazın**",
+  await event.reply("**🤖Salam Mən [Usta Taggger Bot](http://t.me/ustataggerbot)-u.**\n**Qrupunuzdakı Demək olar ki, Bütün Üzvləri Tag Edə Bilərəm.\n\n🤖Əmrlər üçün======> /help yazın**",
                     buttons=(
                
-		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a')],
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/ustataggerbot?startgroup=a')],
                       [Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
                       [Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
 		      [Button.url('Sahib👨‍💻', 'https://t.me/Leytenant_85')],
