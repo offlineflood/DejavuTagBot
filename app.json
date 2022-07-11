@@ -1,0 +1,50 @@
+{
+  "name": "Telegram Mention TaggerBot",
+  "logo":"https://telegra.ph/file/dfa517fd00b6ca5f7ac9.jpg",
+  "description": "User tagger bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "bot token girin.",
+      "value": ""
+    },
+    "API_ID": {
+      "description": "@otomytelegrambot dan api hash api id alınız.",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "@otomytelegrambot dan api hash api id alınız.",
+      "value": ""
+    },
+    "BOT_NAME": {
+      "description": "botun adını girin.",
+      "value": ""
+    },
+    "BOT_USERNAME": {
+      "description": "botun adresini girin.",
+      "value": ""
+    },
+    "BOT_ID": {
+      "description": "botun id'sini girin.",
+      "value": ""
+    },
+    "SUDO_USERS": {
+      "description": "botun sahibini girin.",
+      "value": ""
+    },
+    "SUPPORT_CHAT": {
+      "description": "botun destek grubunu girin.",
+      "value": "RepoHaneX"
+    },
+    "OWNER_ID": {
+      "description": "botun sahibinin id'sini girin.",
+      "value": ""
+    },
+    "OWNER_USERNAME": {
+      "description": "botun sahibinin adresini girin.",
+      "value": ""
+    }
+  },
+  "buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }]
+}
