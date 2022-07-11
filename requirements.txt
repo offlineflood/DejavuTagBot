@@ -1,0 +1,5 @@
+telethon
+cryptg
+requests
+pyrogram==1.3.6
+tgcrypto
