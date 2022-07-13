@@ -533,9 +533,9 @@ async def handler(event):
    #       if usrnum == 5:
         
          
-           await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+      #     await client.send_message(event.chat_id, usrtxt, reply_to=msg)
     #   
-           await asyncio.sleep(2)
+    #       await asyncio.sleep(2)
          
      #         usrnum = 0
           
