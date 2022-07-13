@@ -519,8 +519,9 @@ async def mentionall(tagadmin):
  
     usrnum = 0
     usrtxt = ""
-       async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
-      usrnum += 1
+      
+         async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
+        usrnum += 1
         usrtxt += f"👥-[{usr.first_name}](tg://user?id={usr.id})\n "
           if event.chat_id not in anlik_calisan:
            await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
