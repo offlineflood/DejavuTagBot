@@ -520,7 +520,7 @@ async def mentionall(tagadmin):
     usrnum = 0
     usrtxt = ""
       
-         async for admin in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
+         async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
        
            usrnum += 1
          
