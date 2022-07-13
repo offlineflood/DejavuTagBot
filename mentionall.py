@@ -508,7 +508,8 @@ async def mentionall(tagadmin):
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
-       await asyncio.sleep(2)
+        
+        await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
     anlik_calisan.remove(event.chat_id)
