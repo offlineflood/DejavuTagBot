@@ -507,7 +507,7 @@ async def mentionall(tagadmin):
         await event.respond("Etikeletme İşlemi Bitti 👥 İyi günler dileriz 🤗")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
        await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
