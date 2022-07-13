@@ -516,6 +516,7 @@ async def mentionall(tagadmin):
   
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
+          
           usrnum = 0
           usrtxt = ""  
           async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):    
