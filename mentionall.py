@@ -455,15 +455,24 @@ async def handler(event):
         return await event.reply("__Sən mənə sahib deyilsən!__")
     await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM')
 
-@client.on(events.NewMessage(pattern='/reklam'))
-async def handler(event):
+  @client.on(events.NewMessage(pattern='/reklam'))
+  async def handler(event):
 	
     await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
 
-	@client.on(events.NewMessage(pattern="^/atag ?(.*)"))
-#async def mentionalladmin(event):
-	async def mentionall(event):
+
+	
+
+	
+	
+     #  @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
+       #async def mentionalladmin(event):
+	#async def mentionall(event):
+	
+	
+@client.on(events.NewMessage(pattern="^/atag ?(.*)"))
+async def mentionall(tagadmin):
 
   if event.is_private:
     return await event.respond("__Bu komut gruplarda ve kanallarda kullanılabilir.!__")
