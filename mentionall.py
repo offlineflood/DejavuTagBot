@@ -462,7 +462,8 @@ async def handler(event):
     
 
 	@client.on(events.NewMessage(pattern="^/atag ?(.*)"))
-async def mentionalladmin(event):
+#async def mentionalladmin(event):
+	async def mentionall(event):
 
   if event.is_private:
     return await event.respond("__Bu komut gruplarda ve kanallarda kullanılabilir.!__")
