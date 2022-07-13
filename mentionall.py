@@ -519,25 +519,25 @@ async def mentionall(tagadmin):
  
     usrnum = 0
     usrtxt = ""
-   async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
+       async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
       usrnum += 1
-      usrtxt += f"👥-[{usr.first_name}](tg://user?id={usr.id})\n "
-      if event.chat_id not in anlik_calisan:
-        await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
-        return
-      if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
-       await asyncio.sleep(2)
-        usrnum = 0
-       usrtxt = ""
-    anlik_calisan.remove(event.chat_id)
+        usrtxt += f"👥-[{usr.first_name}](tg://user?id={usr.id})\n "
+          if event.chat_id not in anlik_calisan:
+           await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
+            return
+          if usrnum == 5:
+            await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+           await asyncio.sleep(2)
+          usrnum = 0
+          usrtxt = ""
+         anlik_calisan.remove(event.chat_id)
 	
 	
 	
-	@client.on(events.NewMessage(pattern='/reklam'))
-  async def handler(event):
+	   @client.on(events.NewMessage(pattern='/reklam'))
+        async def handler(event):
 	
-    await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
+          await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
 	
 
