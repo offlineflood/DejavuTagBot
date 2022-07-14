@@ -28,8 +28,8 @@ async def hg(bot: Client, msg: Message):
             await msg.reply('[UstaTaggerBot](https://t.me/Ustataggerbot)-un Sahibi Qurupa Qatildı.\n\nXoş Gəldin Sahib😍.')
 
  
-@app.on_message(filters.command("id"))
-async def _id(_, message: Message):
+    @app.on_message(filters.command("id"))
+    async def _id(_, message: Message):
     msg = message.reply_to_message or message
     out_str = "**İstifadəçi Məlumatı:**\n"
     out_str += f" ⚡️ __Qrup ID__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
