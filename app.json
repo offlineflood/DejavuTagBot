@@ -5,43 +5,43 @@
   "env": {
     "BOT_TOKEN": {
       "description": "bot token girin.",
-      "value": ""
+      "value": "5548778371:AAGAanMt_sGO5L8Jl7PQkuClR7oxUY61eIE"
     },
     "API_ID": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
-      "value": ""
+      "value": "8173444"
     },
     "API_HASH": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
-      "value": ""
+      "value": "8ce53801c1b49cd4d2fa108eb151b255"
     },
     "BOT_NAME": {
       "description": "botun adını girin.",
-      "value": ""
+      "value": "bebe"
     },
     "BOT_USERNAME": {
       "description": "botun adresini girin.",
-      "value": ""
+      "value": "bebe"
     },
     "BOT_ID": {
       "description": "botun id'sini girin.",
-      "value": ""
+      "value": "bebe"
     },
     "SUDO_USERS": {
       "description": "botun sahibini girin.",
-      "value": ""
+      "value": "bebe"
     },
     "SUPPORT_CHAT": {
       "description": "botun destek grubunu girin.",
-      "value": "RepoHaneX"
+      "value": "bebe"
     },
     "OWNER_ID": {
       "description": "botun sahibinin id'sini girin.",
-      "value": ""
+      "value": "bebe"
     },
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
-      "value": ""
+      "value": "bebe"
     }
   },
   "buildpacks": [{
