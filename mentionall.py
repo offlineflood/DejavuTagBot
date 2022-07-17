@@ -501,9 +501,9 @@ async def handler(event):
 	
      #    await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
-	app.start()
-print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
-idle()
+	#app.start()
+#print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
+#idle()
 
 print(">> Bot işləyir narahat olmayın. @ThrHassan Məlumat almaq üçün <<")
 client.run_until_disconnected()
