@@ -30,7 +30,19 @@ anlik_calisan = []
 tekli_calisan = []
 
 
+from pyrogram import Client, filters, idle
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+import pyrogram
+from Config import Config
+from datetime import datetime
 
+
+app = Client(
+    "MentionAll",
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
+    bot_token=Config.BOT_TOKEN,
+)
 
 @app.on_message(filters.new_chat_members, group=1)
 async def hg(bot: Client, msg: Message):
@@ -489,7 +501,9 @@ async def handler(event):
 	
      #    await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
-	
+	app.start()
+print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
+idle()
 
 print(">> Bot işləyir narahat olmayın. @ThrHassan Məlumat almaq üçün <<")
 client.run_until_disconnected()
