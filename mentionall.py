@@ -31,6 +31,32 @@ tekli_calisan = []
 
 
 
+
+@app.on_message(filters.new_chat_members, group=1)
+async def hg(bot: Client, msg: Message):
+    for new_user in msg.new_chat_members:
+        if str(new_user.id) == str(Config.BOT_ID):
+            await msg.reply(
+                f'''`**🤖Salam` {msg.from_user.mention} `\n🤖Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️`\n\n🤖Qurup'da User'ləri Tag Edmə Xususiyətinə Malik'əm.
+Ətraflı Məlumat üçün /help-ə toxunun.**''')
+
+        elif str(new_user.id) == str(Config.OWNER_ID):
+            await msg.reply('[UstaTaggerBot](https://t.me/Ustataggerbot)-un Sahibi Qurupa Qatildı.\n\nXoş Gəldin Sahib😍.')
+
+ 
+    @app.on_message(filters.command("id"))
+    async def _id(_, message: Message):
+    msg = message.reply_to_message or message
+    out_str = "**İstifadəçi Məlumatı:**\n"
+    out_str += f" ⚡️ __Qrup ID__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
+    out_str += f" 💎 __İstifadəçi Adı__ : {msg.from_user.first_name}\n"
+    out_str += f" 💬 __Mesaj ID-si__ : `{msg.forward_from_message_id or msg.message_id}`\n"
+    if msg.from_user:
+        out_str += f" 🙋🏻‍♂️ __Cavab verilmiş İstifadəçi ID__ : `{msg.from_user.id}`\n"
+ 
+    await message.reply(out_str)
+
+
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply("**🤖Salam Mən [Usta Taggger Bot](http://t.me/ustataggerbot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
