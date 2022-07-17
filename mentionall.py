@@ -44,17 +44,17 @@ async def hg(bot: Client, msg: Message):
             await msg.reply('[UstaTaggerBot](https://t.me/Ustataggerbot)-un Sahibi Qurupa Qatildı.\n\nXoş Gəldin Sahib😍.')
 
  
-    @app.on_message(filters.command("id"))
-    async def _id(_, message: Message):
-    msg = message.reply_to_message or message
-    out_str = "**İstifadəçi Məlumatı:**\n"
-    out_str += f" ⚡️ __Qrup ID__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
-    out_str += f" 💎 __İstifadəçi Adı__ : {msg.from_user.first_name}\n"
-    out_str += f" 💬 __Mesaj ID-si__ : `{msg.forward_from_message_id or msg.message_id}`\n"
-    if msg.from_user:
-        out_str += f" 🙋🏻‍♂️ __Cavab verilmiş İstifadəçi ID__ : `{msg.from_user.id}`\n"
+   # @app.on_message(filters.command("id"))
+   # async def _id(_, message: Message):
+   # msg = message.reply_to_message or message
+   # out_str = "**İstifadəçi Məlumatı:**\n"
+   # out_str += f" ⚡️ __Qrup ID__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
+   # out_str += f" 💎 __İstifadəçi Adı__ : {msg.from_user.first_name}\n"
+   # out_str += f" 💬 __Mesaj ID-si__ : `{msg.forward_from_message_id or msg.message_id}`\n"
+    #if msg.from_user:
+    #    out_str += f" 🙋🏻‍♂️ __Cavab verilmiş İstifadəçi ID__ : `{msg.from_user.id}`\n"
  
-    await message.reply(out_str)
+   # await message.reply(out_str)
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
