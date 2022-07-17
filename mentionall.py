@@ -67,7 +67,10 @@ async def cancel(event):
   anlik_calisan.remove(event.chat_id)
 
 
-emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 🐮 🐷 🐽 🐗 🦓 🦄 🐴 🐸 🐲 🦎 🐉 🦖 🦕 🐢 🐊 🐍 🐁 🐀 🐇 🐈 🐩 🐕 🦮 🐕‍🦺 🐅 🐆 🐎 🐖 🐄 🐂 🐃 🐏 🐑 🐐 🦌 🦙 🦥 🦘 🐘 🦏 🦛 🦒 🐒 🦍 🦧 🐪 🐫 🐿️ 🦨 🦡 🦔 🦦 🦇 🐓 🐔 🐣 🐤 🐥 🐦 🦉 🦅 🦜 🕊️ 🦢 🦩 🦚 🦃 🦆 🐧🦈 🐬 🐋 🐳 🐟 🐠 🐡 🦐 🦞 🦀 🦑 🐙 🦪 🦂 🕷️ 🦋 🐞 🐝 🦟 🦗 🐜 🐌 🐚 🕸️ 🐛 🐾 😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 😍 🤩 🥳 🤗 🙃 🙂 ☺️ 😊 😏 😌 😉 🤭 😶 😐 😑 😔 😋 😛 😝 😜 🤪 🤔 🤨 🧐 🙄 😒 😤 😠 🤬 ☹️ 🙁 😕 😟 🥺 😳 😬 🤐 🤫 😰 😨 😧 😦 😮 😯 😲 😱 🤯 😢 😥 😓 😞 😖 😣 😩 😫 🤤 🥱 😴 😪 🌛 🌜 🌚 🌝 🌞 🤢 🤮 🤧 🤒 🍓 🍒 🍎 🍉 🍑 🍊 🥭 🍍 🍌 🌶 🍇 🥝 🍐 🍏 🍈 🍋 🍄 🥕 🍠 🧅 🌽 🥦 🥒 🥬 🥑 🥯 🥖 🥐 🍞 🥜 🌰 🥔 🧄 🍆 🧇 🥞 🥚 🧀 🥓 🥩 🍗 🍖 🥙 🌯 🌮 🍕 🍟 🥨 🥪 🌭 🍔 🧆 🥘 🍝 🥫 🥣 🥗 🍲 🍛 🍜 🍢 🥟 🍱 🍚 🥡 🍤 🍣 🦞 🦪 🍘 🍡 🥠 🥮 🍧 🍧 🍨".split(" ")
+# emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 🐮 🐷 🐽 🐗 🦓 🦄 🐴 🐸 🐲 🦎 🐉 🦖 🦕 🐢 🐊 🐍 🐁 🐀 🐇 🐈 🐩 🐕 🦮 🐕‍🦺 🐅 🐆 🐎 🐖 🐄 🐂 🐃 🐏 🐑 🐐 🦌 🦙 🦥 🦘 🐘 🦏 🦛 🦒 🐒 🦍 🦧 🐪 🐫 🐿️ 🦨 🦡 🦔 🦦 🦇 🐓 🐔 🐣 🐤 🐥 🐦 🦉 🦅 🦜 🕊️ 🦢 🦩 🦚 🦃 🦆 🐧🦈 🐬 🐋 🐳 🐟 🐠 🐡 🦐 🦞 🦀 🦑 🐙 🦪 🦂 🕷️ 🦋 🐞 🐝 🦟 🦗 🐜 🐌 🐚 🕸️ 🐛 🐾 😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 😍 🤩 🥳 🤗 🙃 🙂 ☺️ 😊 😏 😌 😉 🤭 😶 😐 😑 😔 😋 😛 😝 😜 🤪 🤔 🤨 🧐 🙄 😒 😤 😠 🤬 ☹️ 🙁 😕 😟 🥺 😳 😬 🤐 🤫 😰 😨 😧 😦 😮 😯 😲 😱 🤯 😢 😥 😓 😞 😖 😣 😩 😫 🤤 🥱 😴 😪 🌛 🌜 🌚 🌝 🌞 🤢 🤮 🤧 🤒 🍓 🍒 🍎 🍉 🍑 🍊 🥭 🍍 🍌 🌶 🍇 🥝 🍐 🍏 🍈 🍋 🍄 🥕 🍠 🧅 🌽 🥦 🥒 🥬 🥑 🥯 🥖 🥐 🍞 🥜 🌰 🥔 🧄 🍆 🧇 🥞 🥚 🧀 🥓 🥩 🍗 🍖 🥙 🌯 🌮 🍕 🍟 🥨 🥪 🌭 🍔 🧆 🥘 🍝 🥫 🥣 🥗 🍲 🍛 🍜 🍢 🥟 🍱 🍚 🥡 🍤 🍣 🦞 🦪 🍘 🍡 🥠 🥮 🍧 🍧 
+
+emoji = "😀🐵🍓😃🦁🍒😄🐯 🍎😁🐱🍉😆🐶🍑😅🐺🍊😂🐻🥭🤣🐨🍍😭🐼🍌😗🐹🌶😙🐭🍇😚🐰🥝😘🦊🍐🥰🦝🍏🤩🐮🍈🥳🐷🍋🤗 🐽🍄🙃🐗🥕🙂🦓🍠☺️🦄🧅😊🐴🌽😏🐸🥦😌🐲🥒😉🦎🥬🤭🐉🥑😶🦖🥯😐🦕🥖😑🐢🥐😔🐊🍞😋🐁🌰😛🐀🥔😝🐇🧄😜🐈🍆🤪🐩🧇🤔🐕🥞🤨🦮🥚🧐🐕‍🦺🧀🙄🐅🥓😒🐆🥩😤🐎🍗😠🐖🍖🤬🐄🥙☹️🐂🌯🙁🐃🌮😕🐏🍕😟 🐑🍟🥺🐐🥨😳🦌🥪😬🦙🌭🤐🦥🍔🤫🦘🧆😰🐘🥘😨🦏🍝😧🦛🥫😦🦒🥣😮🐒🥗😯🦍🍲😲🦧🍛😱🐪🍜🤯🐫🍢😢🐿️🥟😥🦨🍱😓🦡🍚😞🦔🥡😖🦦🍤😣🦇🍣😩🐓🦞😫🐔🦪🤤🐣🍘🥱🐤🍡😴🐥🥠 😪🐦🥮 🤢🦉🍧🤮  🦅🍨🤧🦜🍫🤒🪱🍪😶‍🌫🕊️🥜🤠🦢🍭🤑🦩🧈🤤🦃🦚🥵🦆🫑🥶🐧🍥🥸🦈🍦🤓🐳🍳😇🐝🥧🤭🐌🥤🤫🦋🍨".split(" ")
+
 
 
 @client.on(events.NewMessage(pattern="^/etag ?(.*)"))
@@ -267,7 +270,7 @@ async def cancel(event):
 	
 
 stag = (
-"Bazı insanlar yağmuru hissеdеr, bazıları isе sadеcе ıslanır",
+"CAACAgQAAxkBAAEHVhFi01h5G6HgLPr3k_CMyQ2y6nQ-qgACEhYAAipyxAxFwZ3HRX9A1x4E, bazıları isе sadеcе ıslanır",
 "Unutma; Hеr gеlеn sеvmеz.. Vе hiçbir sеvеn gitmеz",
 "Hiç bir canın acısı, sеnin acından az dеğildir",
 "Herşeyi denerim; ama yapabildiklerimi yaparım.",
@@ -455,100 +458,10 @@ async def handler(event):
         return await event.reply("__Sən mənə sahib deyilsən!__")
     await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM')
 
- # @client.on(events.NewMessage(pattern='/reklam'))
- # async def handler(event):
+       @client.on(events.NewMessage(pattern='/reklam'))
+        async def handler(event):
 	
-  #  await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
-    
-
-
-	
-
-	
-	
-     #  @client.on(events.NewMessage(pattern="^/atag ?(.*)"))
-       #async def mentionalladmin(event):
-	#async def mentionall(event):
-	
-	
-#@client.on(events.NewMessage(pattern="^/atag ?(.*)"))
-#async def mentionall(tagadmin):
-
-#  if event.is_private:
- #   return await event.respond("__Bu komut gruplarda ve kanallarda kullanılabilir.!__")
-  
- # admins = []
-#  async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
-#    admins.append(admin.id)
-#  if not event.sender_id in admins:
-  #  return await event.respond("__Yalnızca yöneticiler hepsinden bahsedebilir!__")
-  
- # if event.pattern_match.group(1):
-#    mode = "text_on_cmd"
-#    msg = event.pattern_match.group(1)
- # elif event.reply_to_msg_id:
- #   mode = "text_on_reply"
- #   msg = event.reply_to_msg_id
- #   if msg == None:
-#        return await event.respond("__Eski mesajlar için üyelerden bahsedemem! (gruba eklemeden önce gönderilen mesajlar)__")
- # elif event.pattern_match.group(1) and event.reply_to_msg_id:
-#    return await event.respond("__Bana bir argüman ver!__")
- # else:
-  #  return await event.respond("__Bir mesajı yanıtlayın veya başkalarından bahsetmem için bana bir metin verin!__")
-  
-#  if mode == "text_on_cmd":
- #   anlik_calisan.append(event.chat_id)
-#    usrnum = 0
- #   usrtxt = ""
-#    async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):
- #     usrnum += 1
-  #    usrtxt += f"👥-[{usr.first_name}](tg://user?id={usr.id})\n "
- #     if event.chat_id not in anlik_calisan:
-  #      await event.respond("Etikeletme İşlemi Bitti 👥 İyi günler dileriz 🤗")
-   #     return
-   #   if usrnum == 5:
-   #     await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
-        
-   #     await asyncio.sleep(2)
-   #     usrnum = 0
-    #    usrtxt = ""
-  #  anlik_calisan.remove(event.chat_id)
-  
-#  if mode == "text_on_reply":
-#    anlik_calisan.append(event.chat_id)
-          
-   #       usrnum = 0
-    #      usrtxt = ""  
-    #      async for usr in client.iter_participants(event.chat_id,filter=ChannelParticipantsAdmins):    
-        #  async for usr in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):     
-     #      usrnum += 1 
-   #        usrtxt += f"👥-[{usr.first_name}](tg://user?id={usr.id})\n "
-        
-    #     if event.chat_id not in anlik_calisan:
-         
-    #       await event.respond("İşlem Başarılı Bir Şekilde Durduruldu ❌")
-         
-    #       return
-            
-   #       if usrnum == 5:
-        
-         
-      #     await client.send_message(event.chat_id, usrtxt, reply_to=msg)
-    #   
-    #       await asyncio.sleep(2)
-         
-     #         usrnum = 0
-          
-      #        usrtxt = ""
-       
-          #    anlik_calisan.remove(event.chat_id)
-	
-	
-	
-	  # @client.on(events.NewMessage(pattern='/reklam'))
-     #   async def handler(event):
-	
-        #  await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
+         await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
 	
 
