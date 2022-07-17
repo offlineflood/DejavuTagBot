@@ -25,7 +25,7 @@
     },
     "BOT_ID": {
       "description": "botun id'sini girin.",
-      "value": "bebe"
+      "value": "13356777"
     },
     "SUDO_USERS": {
       "description": "botun sahibini girin.",
@@ -37,7 +37,7 @@
     },
     "OWNER_ID": {
       "description": "botun sahibinin id'sini girin.",
-      "value": "bebe"
+      "value": "24667"
     },
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
