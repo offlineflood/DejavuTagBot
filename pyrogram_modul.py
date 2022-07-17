@@ -16,16 +16,16 @@ app = Client(
 #async def _py(client: Client, message: Message):
  #   await message.reply_text('Pyrogram is a Python library for Telegram bots.')
 
-@app.on_message(filters.new_chat_members, group=1)
-async def hg(bot: Client, msg: Message):
-    for new_user in msg.new_chat_members:
-        if str(new_user.id) == str(Config.BOT_ID):
-            await msg.reply(
-                f'''`**🤖Salam` {msg.from_user.mention} `\n🤖Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️`\n\n🤖Qurup'da User'ləri Tag Edmə Xususiyətinə Malik'əm.
-Ətraflı Məlumat üçün /help-ə toxunun.**''')
+#@app.on_message(filters.new_chat_members, group=1)
+#async def hg(bot: Client, msg: Message):
+ #   for new_user in msg.new_chat_members:
+  #      if str(new_user.id) == str(Config.BOT_ID):
+      #      await msg.reply(
+      #          f'''`**🤖Salam` {msg.from_user.mention} `\n🤖Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️`\n\n🤖Qurup'da User'ləri Tag Edmə Xususiyətinə Malik'əm.
+#Ətraflı Məlumat üçün /help-ə toxunun.**''')
 
-        elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('[UstaTaggerBot](https://t.me/Ustataggerbot)-un Sahibi Qurupa Qatildı.\n\nXoş Gəldin Sahib😍.')
+    #    elif str(new_user.id) == str(Config.OWNER_ID):
+          #  await msg.reply('[UstaTaggerBot](https://t.me/Ustataggerbot)-un Sahibi Qurupa Qatildı.\n\nXoş Gəldin Sahib😍.')
 
  
     @app.on_message(filters.command("id"))
