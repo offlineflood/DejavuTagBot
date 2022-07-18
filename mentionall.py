@@ -75,10 +75,10 @@ async def start(event):
                     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/ustataggerbot?startgroup=a')],
-                      [Button.url('Qurup🛠', 'https://t.me/USTANAME')],
-                      [Button.url('Kanal📢', 'https://t.me/USTABOTLAR')],
-		      [Button.url('Sahib👨‍💻', 'https://t.me/UstaNakhid')],
-                      [Button.url('➕ Usta Music Bot ➕','http://t.me/Ustamusicbot?startgroup=a')],
+                      [Button.url('Qurup🛠', 'https://t.me/USTANAME'),
+                       Button.url('Kanal📢', 'https://t.me/USTABOTLAR')],
+		      [Button.url('Sahib👨‍💻', 'https://t.me/UstaNakhid'),
+                       Button.url('➕ Usta Music Bot ➕','http://t.me/Ustamusicbot?startgroup=a')],
                     # [Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
                      ),
                     link_preview=False
@@ -90,10 +90,10 @@ async def help(event):
   await event.reply(helptext,
                     buttons=(
                       [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/Ustataggerbot?startgroup=a')],
-                      [Button.url('Qurup🛠', 'https://t.me/USTANAME')],
-                      [Button.url('Kanal📢', 'https://t.me/USTABOTLAR')],
-		      [Button.url('Sahib👨‍💻', 'https://t.me/UstaNakhid')],
-                      [Button.url('➕ Usta Music Bot ➕','http://t.me/Ustamusicbot?startgroup=a')],
+                      [Button.url('Qurup🛠', 'https://t.me/USTANAME'),
+                       Button.url('Kanal📢', 'https://t.me/USTABOTLAR')],
+		      [Button.url('Sahib👨‍💻', 'https://t.me/UstaNakhid'),
+                       Button.url('➕ Usta Music Bot ➕','http://t.me/Ustamusicbot?startgroup=a')],
                     # [Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
                     ),
                     link_preview=False
