@@ -31,43 +31,7 @@ tekli_calisan = []
 
 
 from pyrogram import Client, filters, idle
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-import pyrogram
-from Config import Config
-from datetime import datetime
-
-
-app = Client(
-    "MentionAll",
-    api_id=Config.API_ID,
-    api_hash=Config.API_HASH,
-    bot_token=Config.BOT_TOKEN,
-)
-
-@app.on_message(filters.new_chat_members, group=1)
-async def hg(bot: Client, msg: Message):
-    for new_user in msg.new_chat_members:
-        if str(new_user.id) == str(Config.BOT_ID):
-            await msg.reply(
-                f'''`**🤖Salam` {msg.from_user.mention} `\n🤖Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️`\n\n🤖Qurup'da User'ləri Tag Edmə Xususiyətinə Malik'əm.
-Ətraflı Məlumat üçün /help-ə toxunun.**''')
-
-        elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('[UstaTaggerBot](https://t.me/Ustataggerbot)-un Sahibi Qurupa Qatildı.\n\nXoş Gəldin Sahib😍.')
-
- 
-   # @app.on_message(filters.command("id"))
-   # async def _id(_, message: Message):
-   # msg = message.reply_to_message or message
-   # out_str = "**İstifadəçi Məlumatı:**\n"
-   # out_str += f" ⚡️ __Qrup ID__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
-   # out_str += f" 💎 __İstifadəçi Adı__ : {msg.from_user.first_name}\n"
-   # out_str += f" 💬 __Mesaj ID-si__ : `{msg.forward_from_message_id or msg.message_id}`\n"
-    #if msg.from_user:
-    #    out_str += f" 🙋🏻‍♂️ __Cavab verilmiş İstifadəçi ID__ : `{msg.from_user.id}`\n"
- 
-   # await message.reply(out_str)
-
+fro
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
@@ -311,7 +275,7 @@ async def cancel(event):
 	
 
 stag = (
-"CAACAgQAAxkBAAEHVhFi01h5G6HgLPr3k_CMyQ2y6nQ-qgACEhYAAipyxAxFwZ3HRX9A1x4E, https://te.legra.ph/file/50771de1bcd2e67af5ae4.jpg",
+"https://te.legra.ph/file/50771de1bcd2e67af5ae4.jpg , https://te.legra.ph/file/50771de1bcd2e67af5ae4.jpg",
 "Unutma; Hеr gеlеn sеvmеz.. Vе hiçbir sеvеn gitmеz",
 "Hiç bir canın acısı, sеnin acından az dеğildir",
 "Herşeyi denerim; ama yapabildiklerimi yaparım.",
@@ -476,27 +440,6 @@ async def mentionall(event):
 @client.on(events.NewMessage(pattern="^/admins ?(.*)"))
 async def mentionall(tagadmin):
 
-	if tagadmin.pattern_match.group(1):
-		seasons = tagadmin.pattern_match.group(1)
-	else:
-		seasons = ""
-
-	chat = await tagadmin.get_input_chat()
-	a_=0
-	await tagadmin.delete()
-	async for i in client.iter_participants(chat, filter=ChannelParticipantsAdmins):
-		if a_ == 500:
-			break
-		a_+=5
-		await tagadmin.client.send_message(tagadmin.chat_id, "**[{}](tg://user?id={}) {}**".format(i.first_name, i.id, seasons))
-		sleep(0.5)
-	
-		
-
-
-@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
-async def mentionall(tagadmin):
-
  if tagadmin.pattern_match.group(1):
   seasons = tagadmin.pattern_match.group(1)
  else:
@@ -513,7 +456,10 @@ async def mentionall(tagadmin):
   sleep(0.5)
 
 
-
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global tekli_calisan
+  tekli_calisan.remove(event.chat_id)
 
 
 
@@ -531,14 +477,12 @@ async def handler(event):
         return await event.reply("__Sən mənə sahib deyilsən!__")
     await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM')
 
-     #  @client.on(events.NewMessage(pattern='/reklam'))
-    #    async def handler(event):
-	
-     #    await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
+     
+          @client.on(events.NewMessage(pattern='/reklam'))
+          async def handler(event):	
+          await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
-	#app.start()
-#print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
-#idle()
+
 
 print(">> Bot işləyir narahat olmayın. @ThrHassan Məlumat almaq üçün <<")
 client.run_until_disconnected()
