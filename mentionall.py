@@ -522,7 +522,7 @@ async def cancel(event):
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-cumle = ['Üzümlü kekim ✨', 'Nar çiçeği ✨', 'Papatya 🌼', 'Karanfil ✨', 'Gül 🌹', 'Ayıcık 🐻', 'Mutlu pandam 🐼', 'Ay parem ✨', 'Ballı lokmam ✨', 'Bebişim 🥰', 'Lale 🌷', 'Zambak ⚜', 'Nergis ✨', 'Sümbül ☘️', 'Nilüfer ☘️', 'Menekşe ⚜️', 'Lavanta ✨', 'Gül pare ✨', 'Reyhan 🌷', 'Kaktüs ⚜️', 'Böğürtlen ☘️', 'Orkide ☘️', 'Manolya ✨', 'Ayçiçeği ✨', 'Tweety ⚜️', 'Star ✨', 'Yonca 🍀', 'Ateş böceği ✨',]
+cumle = ['Hardasan Nəfəs🥲','Gəlmirsən😒','Yenə Kimə Yazısan🤨','Çirkin Çocuq😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə🤓👉🍫','Sevmirsən Məni?🙁','Haa Düz derisən?🧐','Bu Kimdir😁','Ol😒Gəlmə','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢','Sən Kimsən🙄','Gəl 🤫','Ooo Çox Gözəlsin🤌🤐','Şəxsiyə Yaz😌','Gəl Görüm Hələ🧐','Ayib Olsun😫','Bezdim Səndən🥲','Bu Neçədir1⃣🙂','Nömrəni ver də Vpda yazışaq🙊','Bi Giləm😏','Dava edəx💪',]
 
 
 
