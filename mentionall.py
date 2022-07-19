@@ -293,7 +293,7 @@ stag = (
 "Gözəlliyi gözəl edən ədəbdir, ədəb isə gözəlliyi sevmək üçün səbəbdir!",
 "Qızılgül qoxusu qızılgül verənin əlində qalır"
 "Sənin axtardığın səni axtarandır."
-"Hətta bir quş da payı qədər göydə qanad çırpar".
+"Hətta bir quş da payı qədər göydə qanad çırpar"
 "Həyat ürək götürməyi bilməyənlərə əmanət deyil"
 "Dürüst olmaqdan qorxma, ən çox itirəcəyiniz yanlış insanlar olacaq."
 "İnsan qırılanda səs çıxaran ağac deyil."
