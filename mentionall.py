@@ -466,7 +466,7 @@ async def cancel(event):
 # USTA TAGGER BONA AYID XUSUSI TAG
 
 @client.on(events.NewMessage(pattern="^/usta ?(.*)"))
- async def etag(event):
+ async def mentionall(event):
   global anlik_calisan
   if event.is_private:
     return await event.respond("Bu əmr qruplar üçün etibarlıdır!  ")
