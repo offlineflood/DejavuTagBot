@@ -25,11 +25,11 @@
     },
     "BOT_ID": {
       "description": "botun id'sini girin.",
-      "value": "13356777"
+      "value": "5548778371"
     },
     "SUDO_USERS": {
       "description": "botun sahibini girin.",
-      "value": "bebe"
+      "value": "1980683964"
     },
     "SUPPORT_CHAT": {
       "description": "botun destek grubunu girin.",
@@ -37,11 +37,11 @@
     },
     "OWNER_ID": {
       "description": "botun sahibinin id'sini girin.",
-      "value": "24667"
+      "value": "1980683964"
     },
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
-      "value": "bebe"
+      "value": "1980683964"
     }
   },
   "buildpacks": [{
