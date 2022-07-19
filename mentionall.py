@@ -465,17 +465,17 @@ async def cancel(event):
 
 # USTA TAGGER BONA AYID XUSUSI TAG
 
- @client.on(events.NewMessage(pattern="^/usta ?(.*)"))
- async def mentionall(event):
+@client.on(events.NewMessage(pattern="^/usta ?(.*)"))
+ async def etag(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("**Bu əmr qruplar üçün etibarlıdır! ** ")
+    return await event.respond("Bu əmr qruplar üçün etibarlıdır!  ")
   
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər! ** ")
+    return await event.respond("Bu əmrdən yalnız idarəçilər istifadə edə bilər!  ")
   
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
@@ -484,11 +484,11 @@ async def cancel(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
+        return await event.respond("Əvvəlki Mesajlara Cavab verə Bilərəm! ")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
+    return await event.respond("Başlamaq üçün heç bir səbəb yoxdur! ")
   else:
-    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur,yazın...! **")
+    return await event.respond("Başlamaq üçün heç bir səbəb yoxdur,yazın...! ")
   
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
@@ -496,9 +496,9 @@ async def cancel(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) "
+    usrtxt += f"{random.choice(usta)} "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("Əməliyyat Uğurla Dayandırıldı! ")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
@@ -514,9 +514,9 @@ async def cancel(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(cumle)}](tg://user?id={usr.id}) "
+    usrtxt += f"{random.choice(usta)} "
       if event.chat_id not in anlik_calisan:
-        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
+        await event.respond("Əməliyyat Uğurla Dayandırıldı! ")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
