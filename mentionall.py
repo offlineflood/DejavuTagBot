@@ -97,9 +97,9 @@ async def mentionall(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("**Keçmiş mesajlar üçün tag edə bilmirəm! **")
+        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("**Etiket Yapmak için sebeb yok! **")
+    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
   else:
     return await event.respond("**Tag'a başlamaq üçün səbəb yazın...!**")
   
@@ -462,20 +462,23 @@ async def cancel(event):
   global tekli_calisan
   tekli_calisan.remove(event.chat_id)
 
+	
+	
+	ustaa = ['Hardasan Nəfəs🥲','Gəlmirsən😒','Yenə Kimə Yazısan🤨','Çirkin Çocuq😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə🤓👉🍫','Sevmirsən Məni?🙁','Haa Düz derisən?🧐','Bu Kimdir😁','Ol😒Gəlmə','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢','Sən Kimsən🙄','Gəl 🤫','Ooo Çox Gözəlsin🤌🤐','Şəxsiyə Yaz😌','Gəl Görüm Hələ🧐','Ayib Olsun😫','Bezdim Səndən🥲','Bu Neçədir1⃣🙂','Nömrəni ver də Vpda yazışaq🙊','Bi Giləm😏','Dava edəx💪',]
 
-     @client.on(events.NewMessage(pattern="^/usta ?(.*)"))
-     async def mentionall(event):
 
+   @client.on(events.NewMessage(pattern="^/usta ?(.*)"))
+async def mentionall(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("Bu əmr qruplar üçün etibarlıdır!  ")
-
+    return await event.respond("**Bu əmr qruplar üçün etibarlıdır!**")
+  
   admins = []
   async for admin in client.iter_participants(event.chat_id, filter=ChannelParticipantsAdmins):
     admins.append(admin.id)
   if not event.sender_id in admins:
-    return await event.respond("Bu əmrdən yalnız idarəçilər istifadə edə bilər!  ")
-
+    return await event.respond("**Bu əmrdən yalnız idarəçilər istifadə edə bilər!**")
+  
   if event.pattern_match.group(1):
     mode = "text_on_cmd"
     msg = event.pattern_match.group(1)
@@ -483,47 +486,53 @@ async def cancel(event):
     mode = "text_on_reply"
     msg = event.reply_to_msg_id
     if msg == None:
-        return await event.respond("Əvvəlki Mesajlara Cavab verə Bilərəm! ")
+        return await event.respond("**Əvvəlki Mesajlara Cavab verə Bilərəm! **")
   elif event.pattern_match.group(1) and event.reply_to_msg_id:
-    return await event.respond("Başlamaq üçün heç bir səbəb yoxdur! ")
+    return await event.respond("**Başlamaq üçün heç bir səbəb yoxdur! **")
   else:
-    return await event.respond("Başlamaq üçün heç bir səbəb yoxdur,yazın...! ")
-
+    return await event.respond("**Tag'a başlamaq üçün səbəb yazın...!**")
+  
   if mode == "text_on_cmd":
     anlik_calisan.append(event.chat_id)
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"{random.choice(usta)} "
+      usrtxt += f"[{random.choice(ustaa)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Əməliyyat Uğurla Dayandırıldı! ")
+        await event.respond("** Tag əməliyyatı uğurla dayandırıldı!**")
         return
-      if usrnum == 1:
+      if usrnum == 5:
         await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
-
-
+        
+  
   if mode == "text_on_reply":
     anlik_calisan.append(event.chat_id)
-
+ 
     usrnum = 0
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"{random.choice(usta)} "
+      usrtxt += f"[{random.choice(ustaa)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Əməliyyat Uğurla Dayandırıldı!  ")
+        await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
-      if usrnum == 1:
+      if usrnum == 5:
         await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
 
-usta = ['Hardasan Nəfəs🥲','Gəlmirsən😒','Yenə Kimə Yazısan🤨','Çirkin Çocuq😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə🤓👉🍫','Sevmirsən Məni?🙁','Haa Düz derisən?🧐','Bu Kimdir😁','Ol😒Gəlmə','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢','Sən Kimsən🙄','Gəl 🤫','Ooo Çox Gözəlsin🤌🤐','Şəxsiyə Yaz😌','Gəl Görüm Hələ🧐','Ayib Olsun😫','Bezdim Səndən🥲','Bu Neçədir1⃣🙂','Nömrəni ver də Vpda yazışaq🙊','Bi Giləm😏','Dava edəx💪',]
+
+@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+async def cancel(event):
+  global anlik_calisan
+  anlik_calisan.remove(event.chat_id)
+
+#usta = ['Hardasan Nəfəs🥲','Gəlmirsən😒','Yenə Kimə Yazısan🤨','Çirkin Çocuq😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə🤓👉🍫','Sevmirsən Məni?🙁','Haa Düz derisən?🧐','Bu Kimdir😁','Ol😒Gəlmə','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢','Sən Kimsən🙄','Gəl 🤫','Ooo Çox Gözəlsin🤌🤐','Şəxsiyə Yaz😌','Gəl Görüm Hələ🧐','Ayib Olsun😫','Bezdim Səndən🥲','Bu Neçədir1⃣🙂','Nömrəni ver də Vpda yazışaq🙊','Bi Giləm😏','Dava edəx💪',]
 
 
 
