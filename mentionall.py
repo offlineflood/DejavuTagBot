@@ -465,7 +465,7 @@ async def cancel(event):
 
 
 
- @client.on(events.NewMessage(pattern='/offline'))
+@client.on(events.NewMessage(pattern='/offline'))
  async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
@@ -473,7 +473,7 @@ async def cancel(event):
     await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM')
 
      
-          @client.on(events.NewMessage(pattern='/reklam'))
+@client.on(events.NewMessage(pattern='/reklam'))
           async def handler(event):	
           await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
