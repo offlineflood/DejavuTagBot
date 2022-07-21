@@ -523,7 +523,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-usta = ('Hardasan Nəfəs🥲','Gəlmirsən😒','Yenə Kimə Yazısan🤨','Çirkin Çocuq😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə🤓👉🍫','Sevmirsən Məni?🙁','Haa Düz derisən?🧐','Bu Kimdir😁','Ol😒Gəlmə','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢','Sən Kimsən🙄','Gəl 🤫','Ooo Çox Gözəlsin🤌🤐','Şəxsiyə Yaz😌','Gəl Görüm Hələ🧐','Ayib Olsun😫','Bez'dim Səndən🥲','Bu Neçədir1⃣🙂','Nömrəni ver də Vpda yazışaq🙊','Bi Giləm😏','Dava edəx💪',) 
+usta = ('Hardasan Nəfəs🥲','Gəlmirsən😒','Yenə Kimə Yazısan🤨','Çirkin Çocuq😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə🤓👉🍫','Sevmirsən Məni?🙁','Haa Düz derisən?🧐','Bu Kimdir😁','Ol😒Gəlmə','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢','Sən Kimsən🙄','Gəl 🤫','Ooo Çox Gözəlsin🤌🤐','Şəxsiyə Yaz😌','Gəl Görüm Hələ🧐','Ayib Olsun😫','Bezdim Səndən🥲','Bu Neçədir1⃣🙂','Nömrəni ver də Vpda yazışaq🙊','Bi Giləm😏','Dava edəx💪',) 
 
 
 @client.on(events.NewMessage(pattern='/offline'))
