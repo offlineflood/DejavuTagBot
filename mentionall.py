@@ -30,8 +30,7 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-from pyrogram import Client, filters, idle
-fro
+
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
