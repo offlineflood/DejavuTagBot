@@ -34,7 +34,7 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🤖Salam Mən [Usta Taggger Bot](http://t.me/ustataggerbot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+  await event.reply("**🤖Salam {msg.from_user.mention} Mən [Usta Taggger Bot](http://t.me/ustataggerbot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/ustataggerbot?startgroup=a'), 
@@ -50,7 +50,7 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "** [Usta Tagger Bot](http://t.me/UstaTaggerBot)-un Əmrlər.**\n\n**🤖 /tag <səbəb> - 5-li Tag Atışları.**\n**🤖 /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖 /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖 /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖 /usta <səbəb> - Usta Tagger Bot'una aid Tag etiketlər.**\n**🤖 /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖 /cancel - Tag Ələməyi Dayandır.**\n**🤖 /start - Botu işə salır**\n**🤖 /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
+  helptext = "** {msg.from_user.mention} [Usta Tagger Bot](http://t.me/UstaTaggerBot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - Usta Tagger Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
   await event.reply(helptext,
                     buttons=(
                       [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/ustataggerbot?startgroup=a'), 
@@ -316,12 +316,12 @@ stag = (
 "Mənə də, sənə də siqaret lazımdır",
 "Mən səndən xüsusi birini tanımırdım",
 	#burdan ayniii
-"birgün aşklar biter, hatıralar kalır",
-"Sevmek ne uzun kelime!",
+"Bir gün sevgi bitər, xatirələr qalır",
+"Sevmək nə qədər uzun bir sözdür!",
 "Hatırladığım en unutulası şeysin.",
-"Beraber gülmeyi özlediğim insanlar var.",
-"Mutluluğu sende bulan senindir ötesi misafir.",
-"Zor sev, ama sevmiyorsa zorlama!",
+"Birlikdə gülmək üçün darıxdığım insanlar var.",
+"Xoşbəxtliyi səndə tapan sənindir, üstəlik qonaq.",
+"Çox sev, amma bəyənmirsənsə məcbur etmə!",
 "O kadar güzel gülüyordu ki, sevmesem ziyan olacaktı.",
 "ve insan insana yoldaş olmalı yaralarını sarmalı",
 "Mezarlık, hırs uğruna pişman olanlarla dolu",
@@ -334,6 +334,7 @@ stag = (
 "görmezden geldiğin sevgiye muhtaç kalman dileğiyle",
 "Keşke akıl vermek yerine huzur verseniz",
 "Hiç bilmediğim o kokunu çok özlüyorum",
+    #Mfmf
 "İ𝑦𝑖 𝑜𝑙𝑎𝑛 𝑘𝑎𝑦𝑏𝑒𝑡𝑠𝑒 𝑑𝑒 𝑘𝑎𝑧𝑎𝑛ı𝑟",
 "𝐴şı𝑘 𝑜𝑙𝑚𝑎𝑘 𝑔ü𝑧𝑒𝑙 𝑏𝑖𝑟 ş𝑒𝑦 𝑎𝑚𝑎 𝑠𝑎𝑑𝑒𝑐𝑒 𝑠𝑎𝑛𝑎",
 "𝐾𝑖𝑚𝑠𝑒 𝑘𝑖𝑚𝑠𝑒𝑦𝑖 𝑘𝑎𝑦𝑏𝑒𝑡𝑚𝑒𝑧 𝑔𝑖𝑑𝑒𝑛 𝑏𝑎ş𝑘𝑎𝑠ı𝑛ı 𝑏𝑢𝑙𝑢𝑟, 𝑘𝑎𝑙𝑎𝑛 𝑘𝑒𝑛𝑑𝑖𝑛𝑖",
