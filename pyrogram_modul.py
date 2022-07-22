@@ -13,9 +13,9 @@ app = Client(
 )
 
 
-@app.on_message(filters.command("start"))
-async def _py(client: Client, message: Message):
-    await message.reply_text('Pyrogram is a Python library for Telegram bots.')
+#@app.on_message(filters.command("start"))
+#async def _py(client: Client, message: Message):
+   # await message.reply_text('Pyrogram is a Python library for Telegram bots.')
 
 @app.on_message(filters.new_chat_members, group=1)
 async def hg(bot: Client, msg: Message):
