@@ -22,10 +22,10 @@ async def hg(bot: Client, msg: Message):
     for new_user in msg.new_chat_members:
         if str(new_user.id) == str(Config.BOT_ID):
             await msg.reply(
-                f'''`Hey` {msg.from_user.mention} `beni` {msg.chat.title} `grubuna eklediğin için teşekkürler⚡️`\n\n**Grublarda 10k yakın üye etiketleme özelliğim vardır komutlar için /help yazmanız yeterlidir✨**''')
+                f'''`Salam` {msg.from_user.mention} `Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️` \n\n **🤖Qruplardakı Userləri Tag Edmə üçün Yaradıldım.\n🤖Kömək üçün /help yazmaq kifayətdir.✨**''')
 
         elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('İşte bu gelen benim sahibim.')
+            await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
 
 
