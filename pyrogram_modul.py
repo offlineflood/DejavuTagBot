@@ -59,8 +59,8 @@ async def pingy(client, message):
     await hmm.edit(
         f"🤖[Usta Tagger Bot](https://t.me/Ustataggerbot)Ping...!\nㄩ丂ㄒ卂 卩尺ㄖﾌ乇匚ㄒ\n**Ping: {round(ms)}**")
     
-elif str(new_user.id) == str(Config.OWNER_ID):
-await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
+#elif str(new_user.id) == str(Config.OWNER_ID):
+#await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
  
 app.start()
 print(f"Bot pyrogram ( {pyrogram.__version__} sürümü ile başlatıldı. ")
