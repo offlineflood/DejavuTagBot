@@ -22,7 +22,7 @@ async def hg(bot: Client, msg: Message):
      #  elif str(new_user.id) == str(Config.OWNER_ID):
      #      await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
-elif str(new_user.id) == str(Config.OWNER_ID):
+elif str (new_user.id) == str(Config.OWNER_ID):
             await msg.reply('İşte bu gelen benim sahibim.')
 
  
