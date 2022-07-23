@@ -542,15 +542,7 @@ async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sən mənə sahib deyilsən!__")
-    await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM \n\n          
-   ╭━━━╮
-   ╰╮╭╮┃╱╱╭╮
-   ╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮
-   ╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃
-   ╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃
-   ╰━━━┻━━┫┣╯╰╯╰╯╰━━╯
-   ╱╱╱╱╱╱╭╯┃
-   ╱╱╱╱╱╱╰━╯   ')
+    await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯')
 
      
 @client.on(events.NewMessage(pattern='/reklam'))
