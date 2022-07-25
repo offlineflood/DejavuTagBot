@@ -25,7 +25,7 @@ async def hg(bot: Client, msg: Message):
                 f'''`Salam` {msg.from_user.mention} `Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️` \n\n **🤖Qruplardakı Userləri Tag Edmə üçün Yaradıldım.\n🤖Kömək üçün /help yazmaq kifayətdir.✨**''')
 
         elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
+            await msg.reply('🤖 [K.M Tag Bot](https://t.me/KMTagBot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
 
 
@@ -75,7 +75,7 @@ async def pingy(client, message):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await hmm.edit(
-        f"🤖[Usta Tagger Bot](https://t.me/Ustataggerbot)Ping...!\nㄩ丂ㄒ卂 卩尺ㄖﾌ乇匚ㄒ\n**Ping: {round(ms)}**")
+        f"🤖[KM Tag Bot](https://t.me/KMTagBot)\nPing...!\nᖽᐸöᕼᘉə ᘻəᖽᐸᗩᘉ\nｱ尺のﾌ乇ᄃｲ...\n**Ping: {round(ms)}**")
     
 #elif str(new_user.id) == str(Config.OWNER_ID):
 #await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
