@@ -34,14 +34,14 @@ tekli_calisan = []
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("**🤖Salam Mən [Usta Taggger Bot](http://t.me/ustataggerbot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+  await event.reply("**🤖Salam Mən [K.M Tag Bot](http://t.me/KMTagBot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
                
-		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/ustataggerbot?startgroup=a'), 
-		       Button.url('➕ Usta Music Bot ➕','http://t.me/Ustamusicbot?startgroup=a')],
-                      [Button.url('Qurup🛠', 'https://t.me/USTANAME'),
-                       Button.url('Kanal📢', 'https://t.me/USTABOTLAR')],
-		      [Button.url('Sahib👨‍💻', 'https://t.me/UstaNakhid'),],
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'), 
+		       Button.url('➕ K.M Şəkil Oyun Bot ➕','http://t.me/KMSekilOyunBot?startgroup=a')],
+                      [Button.url('Qurup🛠', 'https://t.me/kohne_mekan'),
+                       Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
+		      [Button.url('Sahib👨‍💻', 'https://t.me/Leytenant_85'),],
 
                     
                      ),
@@ -50,18 +50,18 @@ async def start(event):
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
-  helptext = "**🤖[Usta Tagger Bot](http://t.me/UstaTaggerBot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - Usta Tagger Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
+  helptext = "**🤖[K.M Tag Bot](http://t.me/KMTagBot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /kmfamily <səbəb> - KM Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/ustataggerbot?startgroup=a'), 
+                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'), 
 
-		       Button.url('➕ Usta Music Bot ➕','http://t.me/Ustamusicbot?startgroup=a')],
+		       Button.url('➕ K.M Şəkil Oyun Bot ➕','http://t.me/KMSekilOyunBot?startgroup=a')],
 
-                      [Button.url('Qurup🛠', 'https://t.me/USTANAME'),
+                      [Button.url('Qurup🛠', 'https://t.me/kohne_mekan'),
 
-                       Button.url('Kanal📢', 'https://t.me/USTABOTLAR')],
+                       Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
 
-		      [Button.url('Sahib👨‍💻', 'https://t.me/UstaNakhid'),],),
+		      [Button.url('Sahib👨‍💻', 'https://t.me/Leytenant_85'),],),
                     link_preview=False
                    )
 
@@ -473,7 +473,7 @@ async def cancel(event):
   tekli_calisan.remove(event.chat_id)
 
 	
-@client.on(events.NewMessage(pattern="^/usta ?(.*)"))
+@client.on(events.NewMessage(pattern="^/kmfamily ?(.*)"))
 
 async def mentionall(event):
 
@@ -542,14 +542,14 @@ async def handler(event):
     # Kimsə "Salam" və başqa bir şey deyəndə cavab verin
     if str(event.sender_id) not in SUDO_USERS:
         return await event.reply("__Sən mənə sahib deyilsən!__")
-    await event.reply('**Bot İşləyir Narahat olmayın** \n @DegGixM \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯')
+    await event.reply('**Bot İşləyir Narahat olmayın** \n https://t.me/DegGixM \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯')
 
      
 @client.on(events.NewMessage(pattern='/reklam'))
 async def handler(event):	
-     await event.reply('🤖 [Usta Tagger Bot](http://t.me/Ustataggerbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
+     await event.reply('🤖 [K.M Tag Bot](http://t.me/KMTagBot)-unda Reklam Almaq Üzçün [◤KM Fearless ﹄](https://t.me/Leytenant_85)-ilə Әlaqә Saxlayın.')
     
 
 
-print(">> Bot işləyir narahat olmayın. @ThrHassan Məlumat almaq üçün <<")
+print(">> Bot işləyir narahat olmayın. @MUCVE_M Məlumat almaq üçün <<")
 client.run_until_disconnected()
