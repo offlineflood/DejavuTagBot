@@ -5,7 +5,7 @@
   "env": {
     "BOT_TOKEN": {
       "description": "bot token girin.",
-      "value": "5548778371:AAGAanMt_sGO5L8Jl7PQkuClR7oxUY61eIE"
+      "value": ""
     },
     "API_ID": {
       "description": "@otomytelegrambot dan api hash api id alınız.",
@@ -25,11 +25,11 @@
     },
     "BOT_ID": {
       "description": "botun id'sini girin.",
-      "value": "5548778371"
+      "value": "5435321707"
     },
     "SUDO_USERS": {
       "description": "botun sahibini girin.",
-      "value": "1980683964"
+      "value": "1280040987"
     },
     "SUPPORT_CHAT": {
       "description": "botun destek grubunu girin.",
@@ -37,7 +37,7 @@
     },
     "OWNER_ID": {
       "description": "botun sahibinin id'sini girin.",
-      "value": "1980683964"
+      "value": "1776440555"
     },
     "OWNER_USERNAME": {
       "description": "botun sahibinin adresini girin.",
