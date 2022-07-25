@@ -75,7 +75,7 @@ async def pingy(client, message):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await hmm.edit(
-        f"🤖[KM Tag Bot](https://t.me/KMTagBot)\nPing...!\nᖽᐸöᕼᘉə ᘻəᖽᐸᗩᘉ\nｱ尺のﾌ乇ᄃｲ...\n**Ping: {round(ms)}**")
+        f"🤖[KM Tag Bot](https://t.me/KMTagBot)\nPing...!\nᖽᐸöᕼᘉə ᘻəᖽᐸᗩᘉ\nｱ尺のﾌ乇ᄃｲ...\n**◤✞Ping✞◥⇎ {round(ms)}**\n\nhttps://t.me/KMBots")
     
 #elif str(new_user.id) == str(Config.OWNER_ID):
 #await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
