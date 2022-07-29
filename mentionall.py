@@ -552,15 +552,15 @@ async def handler(event):
 @app.on_message(
         filters.command("broadcast") & filters.user(SUDO_USERS)
     )
-    async def broadcast_func(_, message: Message):
-        if db is None:
-            return await message.reply_text(
-                "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
-            )
-        if message.reply_to_message:
-            x = message.reply_to_message.message_id
-            y = message.chat.id
-        else:
+    #async def broadcast_func(_, message: Message):
+     #   if db is None:
+      #      return await message.reply_text(
+       #         "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
+        #    )
+        #if message.reply_to_message:
+         #   x = message.reply_to_message.message_id
+          #  y = message.chat.id
+        #else:
             if len(message.command) < 2:
                 return await message.reply_text(
                     "**İstifadə**:\n/broadcast [MESSAGE] və ya [Mesajı Cavab]"
