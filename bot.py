@@ -38,137 +38,14 @@ grouplist = 1
 async def init():
     await app.start()
 
-    @app.on_message(filters.command(["start", "help"]))
-    async def start_command(_, message: Message):
-        if await mongo.is_banned_user(message.from_user.id):
-            return
-        await mongo.add_served_user(message.from_user.id)
-        await message.reply_text(config.PRIVATE_START_MESSAGE)
 
-    @app.on_message(
-        filters.command("mode") & filters.user(SUDO_USERS)
-    )
-    async def mode_func(_, message: Message):
-        if db is None:
-            return await message.reply_text(
-                "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin."
-            )
-        usage = "**İstifadə:**\n\n/rejim [qrup | şəxsi]\n\n**Qrup**: Bütün gələn mesajlar Giriş qrupuna yönləndiriləcək.\n\n**Şəxsi**: Bütün gələn mesajlar SUDO_USERS Şəxsi Mesajlarına yönləndiriləcək"
-        if len(message.command) != 2:
-            return await message.reply_text(usage)
-        state = message.text.split(None, 1)[1].strip()
-        state = state.lower()
-        if state == "group":
-            await mongo.group_on()
-            await message.reply_text(
-                "Qrup Rejimi Aktivdir. Bütün daxil olan mesajlar LOG Group-a yönləndiriləcək"
-            )
-        elif state == "private":
-            await mongo.group_off()
-            await message.reply_text(
-                "Şəxsi Rejim Aktivdir. Bütün gələn mesajlar bütün SUDO_USER-lərin Şəxsi Mesajına yönləndiriləcək"
-            )
-        else:
-            await message.reply_text(usage)
-
-    @app.on_message(
-        filters.command("block") & filters.user(SUDO_USERS)
-    )
-    async def block_func(_, message: Message):
-        if db is None:
-            return await message.reply_text(
-                "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
-            )
-        if message.reply_to_message:
-            if not message.reply_to_message.forward_sender_name:
-                return await message.reply_text(
-                    "Yalnız yönləndirilmiş mesajlara cavab verin."
-                )
-            replied_id = message.reply_to_message_id
-            try:
-                replied_user_id = save[replied_id]
-            except Exception as e:
-                print(e)
-                return await message.reply_text(
-                    "İstifadəçini əldə etmək alınmadı. Siz botu yenidən işə salmısınız və ya xəta baş verib. Zəhmət olmasa qeydləri yoxlayın"
-                )
-            if await mongo.is_banned_user(replied_user_id):
-                return await message.reply_text("Artıq Blok edilib")
-            else:
-                await mongo.add_banned_user(replied_user_id)
-                await message.reply_text("Botdan Qadağan edilmiş İstifadəçi")
-                try:
-                    await app.send_message(
-                        replied_user_id,
-                        "İndi adminlər tərəfindən Botdan istifadə etmək sizə qadağa qoyulub.",
-                    )
-                except:
-                    pass
-        else:
-            return await message.reply_text(
-                "İstifadəçinin botdan istifadəsinə mane olmaq üçün onun yönləndirilmiş mesajına cavab verin"
-            )
-
-    @app.on_message(
-        filters.command("unblock") & filters.user(SUDO_USERS)
-    )
-    async def unblock_func(_, message: Message):
-        if db is None:
-            return await message.reply_text(
-                "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
-            )
-        if message.reply_to_message:
-            if not message.reply_to_message.forward_sender_name:
-                return await message.reply_text(
-                    "Yalnız yönləndirilmiş mesajlara cavab verin."
-                )
-            replied_id = message.reply_to_message_id
-            try:
-                replied_user_id = save[replied_id]
-            except Exception as e:
-                print(e)
-                return await message.reply_text(
-                    "İstifadəçini əldə etmək alınmadı. Siz botu yenidən işə salmısınız və ya xəta baş verib. Zəhmət olmasa qeydləri yoxlayın"
-                )
-            if not await mongo.is_banned_user(replied_user_id):
-                return await message.reply_text("Artıq Blokdan Çıxarılıb")
-            else:
-                await mongo.remove_banned_user(replied_user_id)
-                await message.reply_text(
-                    "Botdan blokdan çıxarılan istifadəçi"
-                )
-                try:
-                    await app.send_message(
-                        replied_user_id,
-                        "İndi adminlər tərəfindən Botdan bloklanmısınız.",
-                    )
-                except:
-                    pass
-        else:
-            return await message.reply_text(
-                "İstifadəçini botdan blokdan çıxarmaq üçün onun yönləndirilmiş mesajına cavab verin"
-            )
-
-    @app.on_message(
-        filters.command("stats") & filters.user(SUDO_USERS)
-    )
-    async def stats_func(_, message: Message):
-        if db is None:
-            return await message.reply_text(
-                "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
-            )
-        served_users = len(await mongo.get_served_users())
-        blocked = await mongo.get_banned_count()
-        text = f""" **DegGxiM Statistikası :**
-        
-**Python versiyası :** {pyver.split()[0]}
-**Piroqram versiyası :** {pyrover}
-
-**Xidmət edilən İstifadəçilər :** {served_users} 
-**Bloklanmış İstifadəçilər :** {blocked}"""
-        await message.reply_text(text)
-
-    @app.on_message(
+    
+    
+    
+    
+    
+    
+        @app.on_message(
         filters.command("broadcast") & filters.user(SUDO_USERS)
     )
     async def broadcast_func(_, message: Message):
