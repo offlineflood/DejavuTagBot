@@ -546,62 +546,6 @@ async def handler(event):
 
 	
 	
-	
-	
-	
-@app.on_message(
-        filters.command("broadcast") & filters.user(SUDO_USERS)
-    )
-    async def broadcast_func(_, message: Message):
-        if db is None:
-            return await message.reply_text(
-                "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
-            )
-        if message.reply_to_message:
-            x = message.reply_to_message.message_id
-            y = message.chat.id
-         else:
-            if len(message.command) < 2:
-                return await message.reply_text(
-                    "**İstifadə**:\n/broadcast [MESSAGE] və ya [Mesajı Cavab]"
-                )
-            query = message.text.split(None, 1)[1]
-
-        susr = 0
-        served_users = []
-        susers = await mongo.get_served_users()
-        for user in susers:
-            served_users.append(int(user["user_id"]))
-        for i in served_users:
-            try:
-                await app.forward_messages(
-                    i, y, x
-                ) if message.reply_to_message else await app.send_message(
-                    i, text=query
-                )
-                susr += 1
-            except FloodWait as e:
-                flood_time = int(e.x)
-                if flood_time > 200:
-                    continue
-                await asyncio.sleep(flood_time)
-            except Exception:
-                pass
-        try:
-            await message.reply_text(
-                f"**Mesajı yayımlayın {susr} İstifadəçilər.**"
-            )
-        except:
-            pass	
-	
-	
-	
-	
-	
-	
-	
-	
-	
      
 @client.on(events.NewMessage(pattern='/reklam'))
 async def handler(event):	
