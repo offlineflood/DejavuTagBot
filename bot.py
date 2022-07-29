@@ -98,8 +98,8 @@ async def init():
         if user_id in SUDO_USERS:
             if message.reply_to_message:
                 if (
-                    message.text == "/unblock"
-                    or message.text == "/block"
+                    #message.text == "/unblock"
+                   # or message.text == "/block"
                     or message.text == "/broadcast"
                 ):
                     return
@@ -154,8 +154,8 @@ async def init():
     async def incoming_groups(_, message):
         if message.reply_to_message:
             if (
-                message.text == "/unblock"
-                or message.text == "/block"
+                #message.text == "/unblock"
+               # or message.text == "/block"
                 or message.text == "/broadcast"
             ):
                 return
