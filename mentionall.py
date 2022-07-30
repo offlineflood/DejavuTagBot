@@ -29,12 +29,15 @@ anlik_calisan = []
 
 tekli_calisan = []
 
+@bot.on_message(filters.command("start"))
+async def startmsg(_, message):
+    await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
+    caption=f"Hello {message.from_user.mention}. \nI'm AI Chat bot made by Tinura Dinith by Using Affiliateplus API, You can chat with me here.")
 
 
-
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("**🤖Salam Mən [K.M Tag Bot](http://t.me/KMTagBot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+#@client.on(events.NewMessage(pattern="^/start$"))
+#async def start(event):
+ # await event.reply("**🤖Salam Mən [K.M Tag Bot](http://t.me/KMTagBot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'), 
