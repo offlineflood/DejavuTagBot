@@ -29,10 +29,36 @@ anlik_calisan = []
 
 tekli_calisan = []
 
-#@bot.on_message(filters.command("start"))
-#async def startmsg(_, message):
-    #await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
-   # caption=f"Hello {message.from_user.mention}. \nI'm AI Chat bot made by Tinura Dinith by Using Affiliateplus API, You can chat with me here.")
+
+
+@bot.on_message(filters.command(["start"], prefixes=["/", "!"]))
+async def start(client, message):
+    self = await bot.get_me()
+    busername = self.username
+    if message.chat.type != "private":
+        buttons = InlineKeyboardMarkup(
+            [[InlineKeyboardButton(text="Click here",
+                url=f"t.me/kukichatbot?start")]])
+        await message.reply("Contact me in PM",
+                            reply_markup=buttons)
+        
+    else:
+        buttons = [[InlineKeyboardButton("Support", url="https://t.me/metavoidsupport"),
+                    InlineKeyboardButton("Channel", url="https://t.me/metavoid"),
+                    InlineKeyboardButton("Repo", url="https://github.com/metavoidteam/kukichatbot")
+                    ]]
+        Photo = "https://telegra.ph/file/b04509cc8486f23690bba.jpg"
+        await message.reply_photo(Photo, caption=f"Hello [{message.from_user.first_name}](tg://user?id={message.from_user.id}), Machine Learning Chat Bot that can talk about any topic in any language\n /help - Help Commands\n Powered By @MetaVoid", reply_markup=InlineKeyboardMarkup(buttons))
+
+
+
+
+
+
+@bot.on_message(filters.command("start"))
+async def startmsg(_, message):
+    await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
+    caption=f"Hello {message.from_user.mention}. \nI'm AI Chat bot made by Tinura Dinith by Using Affiliateplus API, You can chat with me here.")
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
