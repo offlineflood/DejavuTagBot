@@ -1,4 +1,5 @@
-#
+# dikkat bu hesse tam hazir deyli deye herakuda buna gora xera verecex burani sil!,  ve start fayilna ged bunun adin da ordan sil! ondan sonra depolar. ugur olsun!
+
 # Müəllif hüququ (C) 2021-2022 by offlineflood@Github, < https://github.com/ChatBot >.
 #
 # Bu faylın bir hissəsidir < https://github.com/offlineflood/ChatBot > layihə,
