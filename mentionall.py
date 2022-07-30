@@ -568,7 +568,7 @@ usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən
 @app.on_message(
         filters.command("broadcast") & filters.user(SUDO_USERS)
     )
-    async def broadcast_func(_, message: Message):
+   # async def broadcast_func(_, message: Message):
         if db is None:
             return await message.reply_text(
                 "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
