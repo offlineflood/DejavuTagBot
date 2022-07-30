@@ -576,12 +576,12 @@ usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən
        # if message.reply_to_message:
        #     x = message.reply_to_message.message_id
      #       y = message.chat.id
-        else:
-            if len(message.command) < 2:
-                return await message.reply_text(
-                    "**İstifadə**:\n/broadcast [MESSAGE] və ya [Mesajı Cavab]"
-                )
-            query = message.text.split(None, 1)[1]
+    #    else:
+     #       if len(message.command) < 2:
+      #          return await message.reply_text(
+       #             "**İstifadə**:\n/broadcast [MESSAGE] və ya [Mesajı Cavab]"
+      #          )
+       #     query = message.text.split(None, 1)[1]
 
         susr = 0
         served_users = []
