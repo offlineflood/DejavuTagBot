@@ -584,31 +584,31 @@ usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən
        #     query = message.text.split(None, 1)[1]
 
       #  susr = 0
-        served_users = []
-        susers = await mongo.get_served_users()
-        for user in susers:
-            served_users.append(int(user["user_id"]))
-        for i in served_users:
-            try:
-                await app.forward_messages(
-                    i, y, x
-                ) if message.reply_to_message else await app.send_message(
-                    i, text=query
-                )
-                susr += 1
-            except FloodWait as e:
-                flood_time = int(e.x)
-                if flood_time > 200:
-                    continue
-                await asyncio.sleep(flood_time)
-            except Exception:
-                pass
-        try:
-            await message.reply_text(
-                f"**Mesajı yayımlayın {susr} İstifadəçilər.**"
-            )
-        except:
-            pass
+    #    served_users = []
+     #   susers = await mongo.get_served_users()
+     #   for user in susers:
+      #      served_users.append(int(user["user_id"]))
+    #    for i in served_users:
+       #     try:
+       #         await app.forward_messages(
+        #            i, y, x
+        #        ) if message.reply_to_message else await app.send_message(
+        #            i, text=query
+       #         )
+      #          susr += 1
+        #    except FloodWait as e:
+         #       flood_time = int(e.x)
+          #      if flood_time > 200:
+         #           continue
+          #      await asyncio.sleep(flood_time)
+          #  except Exception:
+       #         pass
+      #  try:
+     #       await message.reply_text(
+       #         f"**Mesajı yayımlayın {susr} İstifadəçilər.**"
+      #      )
+       # except:
+       #     pass
 
 
 
