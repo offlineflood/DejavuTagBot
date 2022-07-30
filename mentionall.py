@@ -573,9 +573,9 @@ usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən
        #     return await message.reply_text(
      #           "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
        #     )
-        if message.reply_to_message:
-            x = message.reply_to_message.message_id
-            y = message.chat.id
+       # if message.reply_to_message:
+       #     x = message.reply_to_message.message_id
+     #       y = message.chat.id
         else:
             if len(message.command) < 2:
                 return await message.reply_text(
