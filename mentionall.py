@@ -583,7 +583,7 @@ usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən
       #          )
        #     query = message.text.split(None, 1)[1]
 
-        susr = 0
+      #  susr = 0
         served_users = []
         susers = await mongo.get_served_users()
         for user in susers:
