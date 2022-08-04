@@ -563,15 +563,16 @@ async def tag_admin(event):
 
 
 
-
+if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
 
 
 #@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
 
 
-client.on('ready', () {
+client.on('ready', () > {
   console.log(`Logged in as ${client.user.username}!`);
 });
+
 
 client.on('message', msg => {
   if (msg.author.bot) return;
