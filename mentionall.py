@@ -30,7 +30,7 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-@client.on('message', msg => {
+client.on('message', msg => {
   if (msg.author.bot) return;
   if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
   if (msg.content.toLowerCase().includes('ah')) msg.reply('Ah deme oh de!');
