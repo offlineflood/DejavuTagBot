@@ -563,7 +563,7 @@ async def tag_admin(event):
 
 
 
-if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
+#if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
 
 
 #@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
