@@ -569,7 +569,7 @@ async def tag_admin(event):
 #@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
 
 
-client.on('ready', () => {
+client.on('ready', () {
   console.log(`Logged in as ${client.user.username}!`);
 });
 
