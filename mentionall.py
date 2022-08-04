@@ -486,7 +486,7 @@ async def mentionall(event):
         usrtxt = ""
 
 
-@client.on(events.NewMessage(pattern="^/isss ?(.*)"))
+@client.on(events.NewMessage(pattern="^//admins ?(.*)"))
 async def tag_admin(event):
     chat = await event.get_input_chat()
     text = "♕︎Adminlər Siyahısı♕︎"
@@ -575,7 +575,7 @@ async def tag_admin(event):
 
 
 client.on('message', msg > {
-  if (msg.author.bot) return;
+ # if (msg.author.bot) return;
   if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
   if (msg.content.toLowerCase().includes('ah')) msg.reply('Ah deme oh de!');
   if (msg.content.toLowerCase().includes('oh')) msg.reply('Oh deme püf de!');
