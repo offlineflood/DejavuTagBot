@@ -13,6 +13,36 @@ app = Client(
 )
 
 
+
+
+@chatbot_cmd("broadcast", is_args=True)
+@god_only
+async def sedlyfsir(event):
+    msgtobroadcast = event.text
+    msgtobroadcast = msgtobroadcast[9:]
+    userstobc = get_all_users()
+    error_count = 0
+    sent_count = 0
+    for starkcast in userstobc:
+        try:
+            await chatbot.send_message(int(starkcast.chat_id), msgtobroadcast)
+        except Exception as e:
+            error_count += 1
+    sent_count = error_count - len(userstobc)
+    await chatbot.send_message(
+        event.chat_id,
+        f"<b>Broadcast Done in <u>{sent_count}</u> Group/Users and I got <u>{error_count}</u> Error and Total Number Was <u>{len(userstobc)}</u></b>",
+        parse_mode="HTML"
+    )
+    await chatbot.send_message(Config.DUMB_CHAT, f"You BroadCasted A New Message. \nMessage - {msgtobroadcast} \nSent Count - {sent_count}")
+
+
+
+
+
+
+
+
 #@app.on_message(filters.command("start"))
 #async def _py(client: Client, message: Message):
    # await message.reply_text('Pyrogram is a Python library for Telegram bots.')
