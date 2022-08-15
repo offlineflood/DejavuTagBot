@@ -30,76 +30,31 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-
-
-
-
-
-#@client.on_message(filters.command("start"))
-#@client.on(events.NewMessage(pattern='^(?i)/start'))
-#@bot.on_message(filters.command(["start"], prefixes=["/", "!"]))
-#async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-        buttons = [[[InlineKeyboardButton("➕ Məni Qrupa əlavə et ➕",url="http://t.me/UstaTagbot?startgroup=a")],
-                    InlineKeyboardButton("🎉 Sahib", url="https://t.me/UstaNakhid"),
-                    InlineKeyboardButton("🤖 USTA Bots", url="https://t.me/ustabots")
-                    ]]
         Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
-        await message.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, **\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", reply_markup=InlineKeyboardMarkup(buttons))
-     #   await message.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, **\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.", reply_markup=InlineKeyboardMarkup(buttons))
+        await message.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, **\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+				 buttons=(
+		                        [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+                                        [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                                         Button.url('🤖 USTA Bots', 'https://t.me/ustabots')]
+				        ),
+                                     link_preview=False		 
+				        )
+ 
 
-
-
-#@client.on(events.NewMessage(pattern="^/start$"))
-#async def start(event):
- # await event.reply("**🤖Salam Mən [K.M Tag Bot](http://t.me/KMTagBot)-u.**\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", 
-#		     buttons=(
- #              
-#		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'), 
-#		       Button.url('➕ K.M Şəkil Oyun Bot ➕','http://t.me/KMSekilOyunBot?startgroup=a')],
- #                     [Button.url('Qurup🛠', 'https://t.me/kohne_mekan'),
-  #                     Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
-##
-  #                  
-   #                  ),
-    ##              )
-#
-
-
-
-
-#@client.on_message(filters.command("help"))
-#@client.on(events.NewMessage(pattern='^(?i)/help'))
-#@bot.on_message(filters.command(["help"], prefixes=["/", "!"]))
-#async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
 @client.on(events.NewMessage(pattern="^/help$"))
 async def start(event):
-        buttons = [[[InlineKeyboardButton("➕ Məni Qrupa əlavə et ➕",url="http://t.me/UstaTagbot?startgroup=a")],
-                    InlineKeyboardButton("🎉 Sahib", url="https://t.me/UstaNakhid"),
-                    InlineKeyboardButton("🤖 USTA Bots", url="https://t.me/ustabots")
-                    ]]
         Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
-        await message.reply_photo(Photo, caption=f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, ** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**", reply_markup=InlineKeyboardMarkup(buttons))
+        await message.reply_photo(Photo, caption=f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, ** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**",
+				 buttons=(
+		                        [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+                                        [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                                         Button.url('🤖 USTA Bots', 'https://t.me/ustabots')]
+				        ),
+                                     link_preview=False
+         			        )
     
-
-
-
-#@client.on(events.NewMessage(pattern="^/help$"))
-#async def help(event):
- # helptext = "**🤖[K.M Tag Bot](http://t.me/KMTagBot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /kmfamily <səbəb> - KM Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
-  #await event.reply(helptext,
-   #                 buttons=(
-    #                  [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'), 
-#
-#		       Button.url('➕ K.M Şəkil Oyun Bot ➕','http://t.me/KMSekilOyunBot?startgroup=a')],
-#
- #                     [Button.url('Qurup🛠', 'https://t.me/kohne_mekan'),
-#
- #		      [Button.url('Sahib👨‍💻', 'https://t.me/Leytenant_85'),],),
-  #                  link_preview=False
-   #                )
-
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
   global anlik_calisan
