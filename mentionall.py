@@ -30,10 +30,10 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
+@client.on(events.NewMessage(pattern="^/start$")) 
 async def start(event):
         Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
-        await message.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, **\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+        await event.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, **\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
 				 buttons=(
 		                        [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
                                         [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
@@ -46,7 +46,7 @@ async def start(event):
 @client.on(events.NewMessage(pattern="^/help$"))
 async def start(event):
         Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
-        await message.reply_photo(Photo, caption=f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, ** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**",
+        await event.reply_photo(Photo, caption=f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, ** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**",
 				 buttons=(
 		                        [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
                                         [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
