@@ -35,7 +35,7 @@ tekli_calisan = []
 
 
 
-@K_G.on_message(filters.command("start"))
+@client.on_message(filters.command("start"))
 async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
         buttons = [[[InlineKeyboardButton("➕ Məni Qrupa əlavə et ➕",url="http://t.me/UstaTagbot?startgroup=a")],
                     InlineKeyboardButton("🎉 Sahib", url="https://t.me/UstaNakhid"),
@@ -65,7 +65,7 @@ async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕
 
 
 
-@K_G.on_message(filters.command("help"))
+@client.on_message(filters.command("help"))
 async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
         buttons = [[[InlineKeyboardButton("➕ Məni Qrupa əlavə et ➕",url="http://t.me/UstaTagbot?startgroup=a")],
                     InlineKeyboardButton("🎉 Sahib", url="https://t.me/UstaNakhid"),
