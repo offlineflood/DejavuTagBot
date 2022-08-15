@@ -30,56 +30,20 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-#client.on('message', msg => {
- # if (msg.author.bot) return;
-  #if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
-  #if (msg.content.toLowerCase().includes('ah')) msg.reply('Ah deme oh de!');
-  #if (msg.content.toLowerCase().includes('oh')) msg.reply('Oh deme püf de!');
-  #if (msg.content.toLowerCase().includes('püf')) msg.reply('Püf deme of de!');
-  #if (msg.content.toLowerCase().includes('günaydın')) msg.reply('sana da günaydın');
-  #if (msg.content.toLowerCase().includes('herkese günaydın')) msg.reply('günaydın :)');
-  #if (msg.content.toLowerCase().includes('iyi geceler')) msg.reply('sana da iyi geceler');
-  #if (msg.content.toLowerCase().includes('sa')) msg.reply('as');
-  #if (msg.content.toLowerCase().includes('iyi akşamlar')) msg.reply('sana da iyi akşamlar');
-  #if (msg.content.toLowerCase().includes('selamın aleyküm')) msg.reply('aleyküm selam');
-  #if (msg.content.toLowerCase().includes('güle güle')) msg.reply('sana da güle güle');
-#});
 
 
 
 
 
-
-
-#@bot.on_message(filters.command(["start"], prefixes=["/", "!"]))
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(client, message):
-    self = await bot.get_me()
-    busername = self.username
-    if message.chat.type != "private":
-        buttons = InlineKeyboardMarkup(
-            [[InlineKeyboardButton(text="Click here",
-                url=f"t.me/kukichatbot?start")]])
-        await message.reply("Contact me in PM",
-                            reply_markup=buttons)
-        
-    else:
-        buttons = [[InlineKeyboardButton("Support", url="https://t.me/metavoidsupport"),
-                    InlineKeyboardButton("Channel", url="https://t.me/metavoid"),
-                    InlineKeyboardButton("Repo", url="https://github.com/metavoidteam/kukichatbot")
+@K_G.on_message(filters.command("start"))
+async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
+        buttons = [[InlineKeyboardButton("⚡️Məni Qrupa Əlavə ed⚡️",url="http://t.me/KMDCGameBot?startgroup=a"),
+                    InlineKeyboardButton("🎉 Qrup⚡️", url="https://t.me/kohne_mekan"),
+                    InlineKeyboardButton("🤖 KMBots⚡️", url="https://t.me/KMBots")
                     ]]
-        Photo = "https://telegra.ph/file/b04509cc8486f23690bba.jpg"
-        await message.reply_photo(Photo, caption=f"Hello [{message.from_user.first_name}](tg://user?id={message.from_user.id}), Machine Learning Chat Bot that can talk about any topic in any language\n /help - Help Commands\n Powered By @MetaVoid", reply_markup=InlineKeyboardMarkup(buttons))
-
-
-
-
-
-@client.on(events.NewMessage(pattern="^/start$"))
-# @bot.on_message(filters.command("start"))
-async def startmsg(_, message):
-    await message.reply_video(video="https://telegra.ph/file/b8f0cbdf67943328459d2.mp4", 
-    caption=f"Hello {message.from_user.mention}. \nI'm AI Chat bot made by Tinura Dinith by Using Affiliateplus API, You can chat with me here.")
+        Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
+        await message.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, \n📎Mən [K.M Doğruluq yoxsa Cəsarət](http://t.me/KMDCGameBot)  oyunun aparıcı botam.\n📎Oyunu başlatmaq üçün əvvəlcə məni qrupa əlavə edib.\n📎Sonra /game  komandasını yazın və qrupa göndərin.", reply_markup=InlineKeyboardMarkup(buttons))
+#
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
@@ -97,6 +61,22 @@ async def start(event):
                      ),
                     link_preview=False
                    )
+
+
+
+
+
+@K_G.on_message(filters.command("start"))
+async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
+        buttons = [[InlineKeyboardButton("⚡️Məni Qrupa Əlavə ed⚡️",url="http://t.me/KMDCGameBot?startgroup=a"),
+                    InlineKeyboardButton("🎉 Qrup⚡️", url="https://t.me/kohne_mekan"),
+                    InlineKeyboardButton("🤖 KMBots⚡️", url="https://t.me/KMBots")
+                    ]]
+        Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
+        await message.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, \n📎Mən [K.M Doğruluq yoxsa Cəsarət](http://t.me/KMDCGameBot)  oyunun aparıcı botam.\n📎Oyunu başlatmaq üçün əvvəlcə məni qrupa əlavə edib.\n📎Sonra /game  komandasını yazın və qrupa göndərin.", reply_markup=InlineKeyboardMarkup(buttons))
+#
+
+
 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
@@ -563,33 +543,7 @@ async def tag_admin(event):
 
 
 
-#if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
 
-
-#@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
-
-
-#client.on('ready', () > {
-#  console.log(`Logged in as ${client.user.username}!`);
-#});
-
-
-client.on('message', msg > {
- # if (msg.author.bot) return;
-  if (msg.content.toLowerCase().includes('of')) msg.reply('Of deme ah de!');
-  if (msg.content.toLowerCase().includes('ah')) msg.reply('Ah deme oh de!');
-  if (msg.content.toLowerCase().includes('oh')) msg.reply('Oh deme püf de!');
-  if (msg.content.toLowerCase().includes('püf')) msg.reply('Püf deme of de!');
-  if (msg.content.toLowerCase().includes('günaydın')) msg.reply('sana da günaydın');
-  if (msg.content.toLowerCase().includes('herkese günaydın')) msg.reply('günaydın :)');
-  if (msg.content.toLowerCase().includes('iyi geceler')) msg.reply('sana da iyi geceler');
-  if (msg.content.toLowerCase().includes('sa')) msg.reply('as');
-  if (msg.content.toLowerCase().includes('iyi akşamlar')) msg.reply('sana da iyi akşamlar');
-  if (msg.content.toLowerCase().includes('selamın aleyküm')) msg.reply('aleyküm selam');
-  if (msg.content.toLowerCase().includes('güle güle')) msg.reply('sana da güle güle');
-});
-
-client.login(settings.token);
 
 
 
@@ -634,7 +588,7 @@ async def cancel(event):
   tekli_calisan.remove(event.chat_id)
 
 	
-@client.on(events.NewMessage(pattern="^/kmfamily ?(.*)"))
+@client.on(events.NewMessage(pattern="^/usta ?(.*)"))
 
 async def mentionall(event):
 
