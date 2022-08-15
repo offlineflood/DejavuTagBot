@@ -15,28 +15,6 @@ app = Client(
 
 
 
-@chatbot_cmd("broadcast", is_args=True)
-@god_only
-async def sedlyfsir(event):
-    msgtobroadcast = event.text
-    msgtobroadcast = msgtobroadcast[9:]
-    userstobc = get_all_users()
-    error_count = 0
-    sent_count = 0
-    for starkcast in userstobc:
-        try:
-            await chatbot.send_message(int(starkcast.chat_id), msgtobroadcast)
-        except Exception as e:
-            error_count += 1
-    sent_count = error_count - len(userstobc)
-    await chatbot.send_message(
-        event.chat_id,
-        f"<b>Broadcast Done in <u>{sent_count}</u> Group/Users and I got <u>{error_count}</u> Error and Total Number Was <u>{len(userstobc)}</u></b>",
-        parse_mode="HTML"
-    )
-    await chatbot.send_message(Config.DUMB_CHAT, f"You BroadCasted A New Message. \nMessage - {msgtobroadcast} \nSent Count - {sent_count}")
-
-
 
 
 
@@ -55,7 +33,7 @@ async def hg(bot: Client, msg: Message):
                 f'''`Salam` {msg.from_user.mention} `Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️` \n\n **🤖Qruplardakı Userləri Tag Edmə üçün Yaradıldım.\n🤖Kömək üçün /help yazmaq kifayətdir.✨**''')
 
         elif str(new_user.id) == str(Config.OWNER_ID):
-            await msg.reply('🤖 [K.M Tag Bot](https://t.me/KMTagBot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
+            await msg.reply('🤖 [USTA Tag Bot](https://t.me/UstaTagbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
 
 
@@ -105,7 +83,7 @@ async def pingy(client, message):
     end = datetime.now()
     ms = (end - start).microseconds / 1000
     await hmm.edit(
-        f"🤖[KM Tag Bot](https://t.me/KMTagBot)\nPing...!\nᖽᐸöᕼᘉə ᘻəᖽᐸᗩᘉ\nｱ尺のﾌ乇ᄃｲ...\n**◤✞Ping✞◥⇎ {round(ms)}**\n\nhttps://t.me/KMBots")
+        f"**◤✞Ping✞◥⇎ {round(ms)}**\n\nUSTA BOTS==>[USTA Bots](https://t.me/ustabots)\nSAHIB==>[USTA Bots <Sahibi>](https://t.me/UstaNakhid)")
     
 #elif str(new_user.id) == str(Config.OWNER_ID):
 #await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
