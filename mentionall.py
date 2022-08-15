@@ -712,7 +712,7 @@ async def handler(event):
      
 @client.on(events.NewMessage(pattern='/reklam'))
 async def handler(event):	
-     await event.reply('🤖 [K.M Tag Bot](http://t.me/KMTagBot)-unda Reklam Almaq Üzçün [◤KM Fearless ﹄](https://t.me/Leytenant_85)-ilə Әlaqә Saxlayın.')
+     await event.reply('🤖 [USTA Tag Bot](http://t.me/UstaTagbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ ¦ 🇧🇻🦅](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
 
 
