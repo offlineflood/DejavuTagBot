@@ -36,8 +36,11 @@ tekli_calisan = []
 
 
 #@client.on_message(filters.command("start"))
-@client.on(events.NewMessage(pattern='^(?i)/start'))
-async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
+#@client.on(events.NewMessage(pattern='^(?i)/start'))
+#@bot.on_message(filters.command(["start"], prefixes=["/", "!"]))
+#async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
+@client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
         buttons = [[[InlineKeyboardButton("➕ Məni Qrupa əlavə et ➕",url="http://t.me/UstaTagbot?startgroup=a")],
                     InlineKeyboardButton("🎉 Sahib", url="https://t.me/UstaNakhid"),
                     InlineKeyboardButton("🤖 USTA Bots", url="https://t.me/ustabots")
@@ -67,8 +70,11 @@ async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕
 
 
 #@client.on_message(filters.command("help"))
-@client.on(events.NewMessage(pattern='^(?i)/help'))
-async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
+#@client.on(events.NewMessage(pattern='^(?i)/help'))
+#@bot.on_message(filters.command(["help"], prefixes=["/", "!"]))
+#async def start(client, message):   #[Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/KMTagBot?startgroup=a'),
+@client.on(events.NewMessage(pattern="^/help$"))
+async def start(event):
         buttons = [[[InlineKeyboardButton("➕ Məni Qrupa əlavə et ➕",url="http://t.me/UstaTagbot?startgroup=a")],
                     InlineKeyboardButton("🎉 Sahib", url="https://t.me/UstaNakhid"),
                     InlineKeyboardButton("🤖 USTA Bots", url="https://t.me/ustabots")
