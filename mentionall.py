@@ -30,30 +30,46 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-@client.on(events.NewMessage(pattern="^/start$")) 
+	
+
+
+@client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-        Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
-        await event.reply_photo(Photo, caption=f"Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, **\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
-				 buttons=(
-		                        [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-                                        [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
-                                         Button.url('🤖 USTA Bots', 'https://t.me/ustabots')]
-				        ),
-                                     link_preview=False		 
-				        )
- 
+  await event.reply("**🤖Salam [{message.from_user.first_name}](tg://user?id={message.from_user.id})💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
+                    buttons=(
+               
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+                      #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
+                      #[Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
+		      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+                      #[Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
+                      #[Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
+                     ),
+                    link_preview=False
+                   )
 
 @client.on(events.NewMessage(pattern="^/help$"))
-async def start(event):
-        Photo = "https://te.legra.ph/file/26c5d4d5aea876f9484ed.jpg"
-        await event.reply_photo(Photo, caption=f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, ** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**",
-				 buttons=(
-		                        [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-                                        [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
-                                         Button.url('🤖 USTA Bots', 'https://t.me/ustabots')]
-				        ),
-                                     link_preview=False
-         			        )
+async def help(event):
+  helptext = "[{message.from_user.first_name}](tg://user?id={message.from_user.id})💭, ** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır.**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
+  await event.reply(helptext,
+                    buttons=(
+                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+                      #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
+                     # [Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
+		      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+                     # [Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
+                    #  [Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
+                    ),
+                    link_preview=False
+                   )
+	
+	
+	
+	
+	
+	
     
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
