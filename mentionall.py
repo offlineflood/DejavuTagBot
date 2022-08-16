@@ -442,7 +442,7 @@ async def mentionall(event):
         usrtxt = ""
 
 
-@client.on(events.NewMessage(pattern="^//admins ?(.*)"))
+@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
 async def tag_admin(event):
     chat = await event.get_input_chat()
     text = "♕︎Adminlər Siyahısı♕︎"
