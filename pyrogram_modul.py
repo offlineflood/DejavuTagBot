@@ -12,19 +12,6 @@ app = Client(
     bot_token=Config.BOT_TOKEN,
 )
 
-
-
-
-
-
-
-
-
-
-#@app.on_message(filters.command("start"))
-#async def _py(client: Client, message: Message):
-   # await message.reply_text('Pyrogram is a Python library for Telegram bots.')
-
 @app.on_message(filters.new_chat_members, group=1)
 async def hg(bot: Client, msg: Message):
     for new_user in msg.new_chat_members:
@@ -64,26 +51,26 @@ async def hg(bot: Client, msg: Message):
  
    # await message.reply(out_str)
 
-@app.on_message(filters.command("info"))
-async def _id(_, message: Message):
-    msg = message.reply_to_message or message
-    out_str = "**İsdifadəçi İd'si:**\n"
-    out_str += f" ⚡️ __Qrup İd'si__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
-    out_str += f" 🙋🏻‍♂️ __Cavab verən İstifadəçi Adı__ : {msg.from_user.first_name}\n"
-    out_str += f" 💬 __Mesaj İd'si__ : `{msg.forward_from_message_id or msg.message_id}`\n"
-    if msg.from_user:
-        out_str += f" 🙋🏻‍♂️ __Cavab verən İstifadəçi İd'si__ : `{msg.from_user.id}`\n"
+#@app.on_message(filters.command("info"))
+#async def _id(_, message: Message):
+ #   msg = message.reply_to_message or message
+  #  out_str = "**İsdifadəçi İd'si:**\n"
+   # out_str += f" ⚡️ __Qrup İd'si__ : `{(msg.forward_from_chat or msg.chat).id}`\n"
+   # out_str += f" 🙋🏻‍♂️ __Cavab verən İstifadəçi Adı__ : {msg.from_user.first_name}\n"
+   # out_str += f" 💬 __Mesaj İd'si__ : `{msg.forward_from_message_id or msg.message_id}`\n"
+   # if msg.from_user:
+    #    out_str += f" 🙋🏻‍♂️ __Cavab verən İstifadəçi İd'si__ : `{msg.from_user.id}`\n"
  
-    await message.reply(out_str)
+#    await message.reply(out_str)
 
-@app.on_message(filters.command("ping"))
-async def pingy(client, message):
-    start = datetime.now()
-    hmm = await message.reply("USTA BOTS==>[USTA Bots](https://t.me/ustabots)\nSAHIB==>[USTA Bots <Sahibi>](https://t.me/UstaNakhid)")
-    end = datetime.now()
-    ms = (end - start).microseconds / 1000
-    await hmm.edit(
-        f"**◤✞Ping✞◥⇎ {round(ms)}**\n\nUSTA BOTS==>[USTA Bots](https://t.me/ustabots)\nSAHIB==>[USTA Bots <Sahibi>](https://t.me/UstaNakhid)")
+#@app.on_message(filters.command("ping"))
+#async def pingy(client, message):
+ #   start = datetime.now()
+  #  hmm = await message.reply("USTA BOTS==>[USTA Bots](https://t.me/ustabots)\nSAHIB==>[USTA Bots <Sahibi>](https://t.me/UstaNakhid)")
+   # end = datetime.now()
+    #ms = (end - start).microseconds / 1000
+  #  await hmm.edit(
+   #     f"**◤✞Ping✞◥⇎ {round(ms)}**\n\nUSTA BOTS==>[USTA Bots](https://t.me/ustabots)\nSAHIB==>[USTA Bots <Sahibi>](https://t.me/UstaNakhid)")
     
 #elif str(new_user.id) == str(Config.OWNER_ID):
 #await msg.reply('🤖 [Usta Tagger Bot](https://t.me/Ustataggerbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
