@@ -39,6 +39,7 @@ async def start(event):
                     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+		      [Button.inline(f"komek", data="help")],    
                       #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
                       #[Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
 		      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
@@ -48,7 +49,7 @@ async def start(event):
                      ),
                     link_preview=False
                    )
-
+ 
 @client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
