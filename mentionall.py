@@ -83,8 +83,9 @@ async def start(event):
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"he yaxsi sxya kec yaz", buttons=(
-                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/DejavuDCBot?start=start')],
+    return await client.send_message(event.chat_id, f"** he yaxsi sxya kec yaz **", buttons=(
+                     [Button.url('➕baslad botu➕','https://t.me/DejavuDCBot?start=start')],
+	             [Button.url('➕ help emirleri ➕','https://t.me/DejavuDCBot?start=help')],
                     ),
                     link_preview=False)
 #https://t.me/Ustamusicbot?start=help
@@ -98,15 +99,14 @@ async def handler(event):
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-	             [Button.inline(f"komek", data="help")]
+	             [Button.inline(f"komek", data="help"),
+	              Button.inline(f"teklifleri", data="reklam")]
                     ),
                     link_preview=False)
 
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
-async def handler(event):
-   async for usr in client.iter_participants(event.chat_id):
-    ad = f"[{usr.first_name}](tg://user?id={usr.id}) "	
+async def handler(event):	
     await event.edit(f"** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**", buttons=(
 	             [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
@@ -115,9 +115,12 @@ async def handler(event):
                     ),
                     link_preview=False)
 
-   if event.is_group:
-      return await client.send_message(event.chat_id, f"help ucun bottona tikla", buttons=(
-                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/DejavuDCBot?start=help')],
+@client.on(events.callbackquery.CallbackQuery(data="reklam"))
+async def handler(event):	
+    await event.edit(f"**reklam ucun bunlara yazinda danana **", buttons=(
+		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+	             [Button.inline(f"◀️ Geri", data="start")]
                     ),
                     link_preview=False)
 
