@@ -5,7 +5,7 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
 from Config import Config
-from pyrogram import Client, filters
+#from pyrogram import Client, filters
 
 logging.basicConfig(
     level=logging.INFO,
@@ -59,7 +59,7 @@ async def start(event):
 	
 
 #@bot.on_message(filters.command('start') & filters.private)
-@client.on(events.callbackquery.CallbackQuery(data="start") & filters.private)
+@client.on(events.callbackquery.CallbackQuery(data="start"))
 #@client.on(events.NewMessage(pattern="^/start$") & filters.private)
 async def start(event):
   await event.reply("**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
