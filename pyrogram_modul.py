@@ -23,10 +23,8 @@ async def hg(bot: Client, msg: Message):
             await msg.reply('🤖 [USTA Tag Bot](https://t.me/UstaTagbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
 def d_or_c(user_id):
-	BUTTON = [[InlineKeyboardButton(text="✨Doğruluq...💬", callback_data = " ".join(["d_data",str(user_id)])),
-	           InlineKeyboardButton(text="✨Cəsarət...💬", callback_data = " ".join(["c_data",str(user_id)]))]]
-	BUTTON += [[InlineKeyboardButton("🎊Təkliflər🎊", url="https://t.me/UstaNakhid")]]
-	#("❓Command", callback_data="cbcmnds")  Button.inline("◀️ Geri", data="start")
+	BUTTON = [[InlineKeyboardButton("⚡️Qrupa Əlavə ed⚡️",url="http://t.me/UstaTagbot?startgroup=a"),
+	           InlineKeyboardButton("💡Usta Bots", url="https://t.me/ustabots")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 
