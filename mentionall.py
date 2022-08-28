@@ -30,16 +30,43 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-	
+
+@client.on(events.NewMessage(pattern="^/help$"))
+async def start(event):
+  await event.reply("sxya kece biledhdhhdhdhd ala",
+                    buttons=(
+	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot')],
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a'),   
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+                     ),
+                    link_preview=False
+                   )
+
+
 
 
 @client.on(events.NewMessage(pattern="^/start$"))
+async def start(event):
+  await event.reply("sxya kece bilersen ala",
+                    buttons=(
+	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot')],
+		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a'),   
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+                     ),
+                    link_preview=False
+                   )
+	
+
+#@bot.on_message(filters.command('start') & filters.private)
+@client.on(events.callbackquery.CallbackQuery(data="start") & filters.private)
+#@client.on(events.NewMessage(pattern="^/start$") & filters.private)
 async def start(event):
   await event.reply("**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
                
 		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		      [Button.inline(f"komek", data="help")],    
+		      [Button.inline(f"komek", data="help")], 
+		      #[Button.inline("✍ Əmrlər", data="help")],    
                       #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
                       #[Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
 		      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
@@ -49,8 +76,17 @@ async def start(event):
                      ),
                     link_preview=False
                    )
- 
-@client.on(events.NewMessage(pattern="^/help$"))
+
+# @client.on(events.callbackquery.CallbackQuery(data="help"))
+#async def handler(event):
+#    await event.edit(f"{komutlar}", buttons=(
+                #      [
+                #      Button.inline("◀️ Geri", data="start")
+               #       ]
+                #    ),
+                #    link_preview=False)
+@client.on(events.callbackquery.CallbackQuery(data="help"))	
+#@client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
   helptext = "** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
   await event.reply(helptext,
@@ -59,7 +95,8 @@ async def help(event):
                       #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
                      # [Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
 		      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+		      [Button.inline("◀️ Geri", data="start")],
                      # [Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
                     #  [Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
                     ),
