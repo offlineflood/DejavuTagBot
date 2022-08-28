@@ -85,7 +85,7 @@ async def start(event):
 
   if event.is_group:
     return await client.send_message(event.chat_id, f"**Bot'un Əmrlər üçün?.Bot'a daxil olub.**", buttons=(
-                     [Button.url('↬Bota Get↫ ','https://t.me/DejavuDCBot?start=start')],
+                     [Button.url('↬Bota Get↫ ','https://t.me/UstaTagbot?start=start')],
 	             [Button.url('💡 USTA Bots','https://t.me/ustabots')],
                     ),
                     link_preview=False)
