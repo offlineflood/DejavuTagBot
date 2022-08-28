@@ -84,7 +84,7 @@ async def start(event):
 
   if event.is_group:
     return await client.send_message(event.chat_id, f"he yaxsi sxya kec yaz", buttons=(
-                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/Ustamusicbot?start=start')],
+                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/DejavuDCBot?start=start')],
                     ),
                     link_preview=False)
 #https://t.me/Ustamusicbot?start=help
@@ -117,7 +117,7 @@ async def handler(event):
 
    if event.is_group:
       return await client.send_message(event.chat_id, f"help ucun bottona tikla", buttons=(
-                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/Ustamusicbot?start=help')],
+                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/DejavuDCBot?start=help')],
                     ),
                     link_preview=False)
 
