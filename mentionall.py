@@ -73,14 +73,11 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"budur de sozunu", buttons=(
-                      [
-                       Button.inline("✍ Əmrlər", data="help")
-                      ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/UstaTagbot?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/dejavuteam')],
-                      [Button.url('📣 Kanal', f'https://t.me/dejavusupport')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/mucve_m')]
+     await event.reply(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", buttons=(
+                     [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+	             [Button.inline(f"komek", data="help")]
                     ),
                     link_preview=False)
 
@@ -93,24 +90,22 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"bu", buttons=(
-                      [
-                       Button.inline("✍ Əmrlər", data="help")
-                      ],
-                      [Button.url('🌱 Məni Qrupa Əlavə Et', f'https://t.me/Ustatagbot?startgroup=a')],
-                     [Button.url('📣 Söhbət Qrupu', f'https://t.me/dejavuteam')],
-                      [Button.url('📣 Kanal', f'https://t.me/dejavusupport')],
-                       [Button.url('👨🏻‍💻 Sahib', f'https://t.me/mucve_m')]
+     await event.edit(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", buttons=(
+                     [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+	             [Button.inline(f"komek", data="help")]
                     ),
                     link_preview=False)
 
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"hhhhhhhh", buttons=(
-                      [
-                      Button.inline("◀️ Geri", data="start")
-                      ]
+    await event.edit(f"** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**", buttons=(
+	             [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+	             [Button.inline(f"◀️ Geri", data="start")]
                     ),
                     link_preview=False)
 
