@@ -83,7 +83,11 @@ async def start(event):
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"he yaxsi sxya kec yaz")
+    return await client.send_message(event.chat_id, f"he yaxsi sxya kec yaz", buttons=(
+                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/Ustamusicbot?start=start')],
+                    ),
+                    link_preview=False))
+#https://t.me/Ustamusicbot?start=help
 
 # Başlanğıc Button
 @client.on(events.callbackquery.CallbackQuery(data="start"))
@@ -109,7 +113,11 @@ async def handler(event):
                     ),
                     link_preview=False)
 
-
+   if event.is_group:
+      return await client.send_message(event.chat_id, f"help ucun bottona tikla", buttons=(
+                     [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/Ustamusicbot?start=help')],
+                    ),
+                    link_preview=False)) 
 
 
 
