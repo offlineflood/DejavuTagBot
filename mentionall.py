@@ -5,6 +5,7 @@ from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
 from Config import Config
+from pyrogram import Client, filters
 
 logging.basicConfig(
     level=logging.INFO,
