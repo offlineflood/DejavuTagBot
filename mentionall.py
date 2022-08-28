@@ -35,34 +35,20 @@ anlik_calisan = []
 tekli_calisan = []
 
 
-
-@client.on(events.NewMessage(pattern="^/help$"))
-async def start(event):
-  await event.reply("sxya kece biledhdhhdhdhd ala",
-                    buttons=(
-	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot'),   
-                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-                     ),
-                    link_preview=False
-                   )
-
-
-
-
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("sxya kece bilersen ala",
-                    buttons=(
-	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot'), 
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-                     ),
-                    link_preview=False
-                   )
+#@client.on(events.NewMessage(pattern="^/start$"))
+#async def start(event):
+ # await event.reply("sxya kece bilersen ala",
+ #                   buttons=(
+#	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot'), 
+  #                    Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+  #                   ),
+  #                  link_preview=False
+ #                  )
 	
 
 #@bot.on_message(filters.command('start') & filters.private)
-@client.on(events.callbackquery.CallbackQuery(data="start"))
 #@client.on(events.NewMessage(pattern="^/start$") & filters.private)
+@client.on(events.callbackquery.CallbackQuery(data="start"))
 async def start(event):
   await event.reply("**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
                     buttons=(
