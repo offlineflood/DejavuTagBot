@@ -73,7 +73,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"{ad} {startmesaj}", buttons=(
+     await event.reply(f"budur de sozunu", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
@@ -93,7 +93,7 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"{ad} {startmesaj}", buttons=(
+     await event.edit(f"bu", buttons=(
                       [
                        Button.inline("✍ Əmrlər", data="help")
                       ],
@@ -107,7 +107,7 @@ async def handler(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):
-    await event.edit(f"{komutlar}", buttons=(
+    await event.edit(f"hhhhhhhh", buttons=(
                       [
                       Button.inline("◀️ Geri", data="start")
                       ]
