@@ -73,7 +73,7 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", buttons=(
+     await event.reply(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
                       Button.url('💡 USTA Bots', 'https://t.me/ustabots')],
@@ -96,7 +96,7 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", buttons=(
+     await event.edit(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
@@ -108,7 +108,7 @@ async def handler(event):
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):	
-    await event.edit(f"** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**", buttons=(
+    await event.edit(f"** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.", buttons=(
 	             [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
@@ -118,7 +118,7 @@ async def handler(event):
 
 @client.on(events.callbackquery.CallbackQuery(data="reklam"))
 async def handler(event):	
-    await event.edit(f"**reklam ucun bunlara yazinda danana **", buttons=(
+    await event.edit(f"**Təkliflər üçün sahib'lə əlaqə saxlaya bilərsiniz.**", buttons=(
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"◀️ Geri", data="start")]
@@ -196,7 +196,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"↯ [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("** Tag əməliyyatı uğurla dayandırıldı!**")
         return
@@ -214,7 +214,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"↯ [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -262,7 +262,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"↯ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -280,7 +280,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"↯ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
@@ -327,7 +327,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"**↣ [{usr.first_name}](tg://user?id={usr.id}) \n**"
+      usrtxt += f"**↯ [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -345,7 +345,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"↯ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -495,7 +495,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{random.choice(stag)}](tg://user?id={usr.id}) "
+      usrtxt += f"↯ [{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -513,7 +513,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{random.choice(stag)}](tg://user?id={usr.id}) "
+      usrtxt += f"↯ [{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
         return
@@ -529,7 +529,7 @@ async def tag_admin(event):
     chat = await event.get_input_chat()
     text = "♕︎Adminlər Siyahısı♕︎"
     async for x in event.client.iter_participants(chat, 100, filter=ChannelParticipantsAdmins):
-        text += f" \n ↣ [{x.first_name}](tg://user?id={x.id})"
+        text += f" \n ↯ [{x.first_name}](tg://user?id={x.id})"
     if event.reply_to_msg_id:
         await event.client.send_message(event.chat_id, text, reply_to=event.reply_to_msg_id)
     else:
@@ -679,7 +679,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{random.choice(usta)}](tg://user?id={usr.id}) "
+      usrtxt += f"↯ [{random.choice(usta)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -697,7 +697,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"↣ [{random.choice(usta)}](tg://user?id={usr.id}) "
+      usrtxt += f"↯ [{random.choice(usta)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
         return
