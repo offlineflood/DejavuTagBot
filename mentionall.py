@@ -76,16 +76,17 @@ async def start(event):
      await event.reply(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-	             [Button.inline(f"komek", data="help")]
+                      Button.url('💡 USTA Bots', 'https://t.me/ustabots')],
+	             [Button.inline(f"📚 Əmrlər", data="help"),
+	              Button.inline(f"📑 Təkliflər", data="reklam")]
                     ),
                     link_preview=False)
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"** he yaxsi sxya kec yaz **", buttons=(
-                     [Button.url('➕baslad botu➕','https://t.me/DejavuDCBot?start=start')],
-	             [Button.url('➕ help emirleri ➕','https://t.me/DejavuDCBot?start=help')],
+    return await client.send_message(event.chat_id, f"**Bot'un Əmrlər üçün?.Bot'a daxil olub.**", buttons=(
+                     [Button.url('↬Bota Get↫ ','https://t.me/DejavuDCBot?start=start')],
+	             [Button.url('💡 USTA Bots','https://t.me/ustabots')],
                     ),
                     link_preview=False)
 #https://t.me/Ustamusicbot?start=help
@@ -99,8 +100,8 @@ async def handler(event):
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
 		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-	             [Button.inline(f"komek", data="help"),
-	              Button.inline(f"teklifleri", data="reklam")]
+	             [Button.inline(f"📚 Əmrlər", data="help"),
+	              Button.inline(f"📑 Təkliflər", data="reklam")]
                     ),
                     link_preview=False)
 
@@ -195,7 +196,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"↣ [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("** Tag əməliyyatı uğurla dayandırıldı!**")
         return
@@ -213,7 +214,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(emoji)}](tg://user?id={usr.id}) "
+      usrtxt += f"↣ [{random.choice(emoji)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -261,7 +262,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"✰ - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"↣ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -279,7 +280,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"✰ - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"↣ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in anlik_calisan:
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
@@ -326,7 +327,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"**✰ - [{usr.first_name}](tg://user?id={usr.id}) \n**"
+      usrtxt += f"**↣ [{usr.first_name}](tg://user?id={usr.id}) \n**"
       if event.chat_id not in tekli_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -344,7 +345,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"✰ - [{usr.first_name}](tg://user?id={usr.id}) \n"
+      usrtxt += f"↣ [{usr.first_name}](tg://user?id={usr.id}) \n"
       if event.chat_id not in tekli_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -494,7 +495,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(stag)}](tg://user?id={usr.id}) "
+      usrtxt += f"↣ [{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -512,7 +513,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(stag)}](tg://user?id={usr.id}) "
+      usrtxt += f"↣ [{random.choice(stag)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
         return
@@ -528,7 +529,7 @@ async def tag_admin(event):
     chat = await event.get_input_chat()
     text = "♕︎Adminlər Siyahısı♕︎"
     async for x in event.client.iter_participants(chat, 100, filter=ChannelParticipantsAdmins):
-        text += f" \n ➮ [{x.first_name}](tg://user?id={x.id})"
+        text += f" \n ↣ [{x.first_name}](tg://user?id={x.id})"
     if event.reply_to_msg_id:
         await event.client.send_message(event.chat_id, text, reply_to=event.reply_to_msg_id)
     else:
@@ -678,7 +679,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(usta)}](tg://user?id={usr.id}) "
+      usrtxt += f"↣ [{random.choice(usta)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
@@ -696,7 +697,7 @@ async def mentionall(event):
     usrtxt = ""
     async for usr in client.iter_participants(event.chat_id):
       usrnum += 1
-      usrtxt += f"[{random.choice(usta)}](tg://user?id={usr.id}) "
+      usrtxt += f"↣ [{random.choice(usta)}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
         return
@@ -770,9 +771,9 @@ async def handler(event):
 	
 	
      
-@client.on(events.NewMessage(pattern='/reklam'))
-async def handler(event):	
-     await event.reply('🤖 [USTA Tag Bot](http://t.me/UstaTagbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ ¦ 🇧🇻🦅](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
+#@client.on(events.NewMessage(pattern='/reklam'))
+#async def handler(event):	
+ #    await event.reply('🤖 [USTA Tag Bot](http://t.me/UstaTagbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ ¦ 🇧🇻🦅](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
     
 
 
