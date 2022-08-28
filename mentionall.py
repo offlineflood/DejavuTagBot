@@ -7,6 +7,10 @@ from asyncio import sleep
 from Config import Config
 #from pyrogram import Client, filters
 
+
+
+
+
 logging.basicConfig(
     level=logging.INFO,
     format='%(name)s - [%(levelname)s] - %(message)s'
@@ -36,9 +40,8 @@ tekli_calisan = []
 async def start(event):
   await event.reply("sxya kece biledhdhhdhdhd ala",
                     buttons=(
-	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot')],
-		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a'),   
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot'),   
+                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
                      ),
                     link_preview=False
                    )
@@ -50,8 +53,7 @@ async def start(event):
 async def start(event):
   await event.reply("sxya kece bilersen ala",
                     buttons=(
-	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot')],
-		      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a'),   
+	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot'), 
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
                      ),
                     link_preview=False
@@ -78,14 +80,15 @@ async def start(event):
                     link_preview=False
                    )
 
-# @client.on(events.callbackquery.CallbackQuery(data="help"))
-#async def handler(event):
-#    await event.edit(f"{komutlar}", buttons=(
-                #      [
-                #      Button.inline("◀️ Geri", data="start")
-               #       ]
-                #    ),
-                #    link_preview=False)
+@client.on(events.callbackquery.CallbackQuery(data="help"))
+async def handler(event):
+    await event.edit(f"hhhhhhhhhhh", buttons=(
+                      [
+                      Button.inline("◀️ Geri", data="start")
+                      ]
+                    ),
+                    link_preview=False)
+
 @client.on(events.callbackquery.CallbackQuery(data="help"))	
 #@client.on(events.NewMessage(pattern="^/help$"))
 async def help(event):
