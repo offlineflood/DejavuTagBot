@@ -86,7 +86,7 @@ async def start(event):
     return await client.send_message(event.chat_id, f"he yaxsi sxya kec yaz", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/Ustamusicbot?start=start')],
                     ),
-                    link_preview=False))
+                    link_preview=False)
 #https://t.me/Ustamusicbot?start=help
 
 # Başlanğıc Button
@@ -117,7 +117,7 @@ async def handler(event):
       return await client.send_message(event.chat_id, f"help ucun bottona tikla", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','https://t.me/Ustamusicbot?start=help')],
                     ),
-                    link_preview=False)) 
+                    link_preview=False)
 
 
 
