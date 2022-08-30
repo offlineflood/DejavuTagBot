@@ -73,9 +73,10 @@ async def start(event):
   if event.is_private:
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.reply(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
+     await event.reply(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	             [Button.url('Qurup🛠', 'https://t.me/Sohbet_Paytaxt'),
                       Button.url('💡 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"📚 Əmrlər", data="help"),
 	              Button.inline(f"📑 Təkliflər", data="reklam")]
@@ -86,7 +87,8 @@ async def start(event):
   if event.is_group:
     return await client.send_message(event.chat_id, f"**Bot'un Əmrlər üçün?.Bot'a daxil olub.**", buttons=(
                      [Button.url('↬Bota Get↫ ','https://t.me/UstaTagbot?start=start')],
-	             [Button.url('💡 USTA Bots','https://t.me/ustabots')],
+	             [Button.url('💡 USTA Bots','https://t.me/ustabots'),
+		      Button.url('Qurup🛠', 'https://t.me/Sohbet_Paytaxt')],
                     ),
                     link_preview=False)
 #https://t.me/Ustamusicbot?start=help
@@ -96,9 +98,10 @@ async def start(event):
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
-     await event.edit(f"**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
+     await event.edit(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	             [Button.url('Qurup🛠', 'https://t.me/Sohbet_Paytaxt'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"📚 Əmrlər", data="help"),
 	              Button.inline(f"📑 Təkliflər", data="reklam")]
@@ -110,7 +113,8 @@ async def handler(event):
 async def handler(event):	
     await event.edit(f"** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**", buttons=(
 	             [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	             [Button.url('Qurup🛠', 'https://t.me/Sohbet_Paytaxt'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"◀️ Geri", data="start")]
                     ),
@@ -119,7 +123,8 @@ async def handler(event):
 @client.on(events.callbackquery.CallbackQuery(data="reklam"))
 async def handler(event):	
     await event.edit(f"**Təkliflər üçün sahib'lə əlaqə saxlaya bilərsiniz.**", buttons=(
-		     [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
+		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	             [Button.url('Qurup🛠', 'https://t.me/Sohbet_Paytaxt'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"◀️ Geri", data="start")]
                     ),
