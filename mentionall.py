@@ -124,7 +124,7 @@ async def handler(event):
 async def handler(event):	
     await event.edit(f"**Təkliflər üçün sahib'lə əlaqə saxlaya bilərsiniz.**", buttons=(
 		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             [Button.url('Qurup🛠', 'https://t.me/Sohbet_Paytaxt'),
+	             [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"◀️ Geri", data="start")]
                     ),
