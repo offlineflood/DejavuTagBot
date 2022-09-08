@@ -6,6 +6,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
 from Config import Config
 #from pyrogram import Client, filters
+
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 
@@ -43,7 +44,11 @@ keyboardd = InlineKeyboardMarkup([
         InlineKeyboardButton("💡Bot Keç", url=f"https://t.me/AsqSozTap_bot?start=start")
     ]
 ])
- 
+keyboarda = InlineKeyboardMarkup([
+    [
+        InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots")
+    ]
+]) 
 
 #•━━━━━━━━•••━━━━━━━━•
 	
@@ -239,7 +244,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, reply_markup=keyboardd)
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg, reply_markup=keyboarda )
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -305,7 +310,7 @@ async def mentionall(event):
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg, keyboarda)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
