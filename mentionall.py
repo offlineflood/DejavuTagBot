@@ -74,8 +74,8 @@ HELP = """
 𓆩𓄂𝙰𝚂𝚀🇦🇿 𝘚𝘰𝘻𝘶 𝘛𝘢𝘱 📕 botunun əmrləri⤵️\n\n\n•━━━━━━━━•••━━━━━━━━•\n/game - Oyunu Başladmaq üçün əmr.\n\n/kec - Digər sözə keçid edən əmr, cəmi 3 keçid haqqınız var.\n\n/global - Oyuncular arasındaki xal qiymətləndirməni bilgisi gösdərən əmr.\n\n/stop - Oyundan çıxmaq üçün isdifadə edilən əmr.\n•━━━━━━━━•••━━━━━━━━•\n\nℹ️ Ətraflı müəlumat üçün bota daxil olun⤵️
  
 """
-
-@Client.on_callback_query(filters.regex("cbbilgi"))
+#@client.on(events.callbackquery.CallbackQuery(data="start"))
+@client.on_callback_query(filters.regex("cbbilgi"))
 async def cbbilgi(_, query: CallbackQuery):
     await query.edit_message_text("𓆩𓄂𝙰𝚂𝚀🇦🇿 𝘚𝘰𝘻𝘶 𝘛𝘢𝘱 📕 Botuna xoş gəldin.\n\nℹ️ Əyləncəli vaxt keçirmək üçün yaradılmış Söz Oyun botu.\n\n📌 Oyun Oynamaq üçün məni əvvəlcə qrupa əlavə edərək məni admin yetgisi verin.", 
     reply_markup=InlineKeyboardMarkup([
@@ -95,7 +95,7 @@ async def cbbilgi(_, query: CallbackQuery):
   )     
     
 
-@Client.on_callback_query(filters.regex("teklif"))
+@client.on_callback_query(filters.regex("teklif"))
 async def herkes(_, query: CallbackQuery):
     await query.edit_message_text(f"""ℹ️ 𓆩𓄂𝙰𝚂𝚀🇦🇿 𝘚𝘰𝘻𝘶 𝘛𝘢𝘱 📕 Təkliflər üçün?,Sahiblə əlaqə saxlayın.""",
     reply_markup=InlineKeyboardMarkup(
@@ -103,17 +103,17 @@ async def herkes(_, query: CallbackQuery):
                InlineKeyboardButton("Usta Bots💡", url=f"https://t.me/ustabots")],
 	      [InlineKeyboardButton("◀️Geri", callback_data="cbbilgi")],])) 
     
-@Client.on_callback_query(filters.regex("helps"))
+@client.on_callback_query(filters.regex("helps"))
 async def helps(_, query: CallbackQuery):
     await query.edit_message_text(f""" <b> 𓆩𓄂𝙰𝚂𝚀🇦🇿 𝘚𝘰𝘻𝘶 𝘛𝘢𝘱 📕 botunun əmrləri⤵️\n\n\n•━━━━━━━━•••━━━━━━━━•\n➥/game - Oyunu Başladmaq üçün əmr.\n\n➥/kec - Digər sözə keçid edən əmr, cəmi 3 keçid haqqınız var.\n\n➥/stop - Oyundan çıxmaq üçün isdifadə edilən əmr.\n\n➥/global - Oyuncular arasındaki xal qiymətləndirməni bilgisi gösdərən əmr.\n•━━━━━━━━•••━━━━━━━━•</b>""", 
     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("◀️Geri", callback_data="cbbilgi")],]))                                 
 
 # Komutlar. 
-@Client.on_message(filters.command("start") & filters.private)
+@client.on_message(filters.command("start") & filters.private)
 async def start(bot, message):
   await message.reply_photo("https://te.legra.ph/file/9d3db23b2ed76cdee2590.jpg",caption=START,reply_markup=keyboard)
 
-@Client.on_message(filters.command("help"))
+@client.on_message(filters.command("help"))
 async def help(bot, message):
   await message.reply_photo("https://te.legra.ph/file/9d3db23b2ed76cdee2590.jpg",caption=HELP,reply_markup=keyboardd) 
 
