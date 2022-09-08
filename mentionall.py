@@ -37,10 +37,7 @@ anlik_calisan = []
 tekli_calisan = []
   
 #--------------------------	
-@bot.on_message(filters.command('leave') & filters.group) 
- def leave(bot, message):
-   bot.send_message(message.chat.id, "Saqolun...")          
-   bot.leave_chat(message.chat.id)
+
 
 
 #•━━━━━━━━•••━━━━━━━━•
