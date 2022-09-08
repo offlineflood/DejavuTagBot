@@ -39,7 +39,7 @@ tekli_calisan = []
 
 
 
-keyboardd = InlineKeyboardMarkup([
+keyboarddd = InlineKeyboardMarkup([
     [
         InlineKeyboardButton("💡Bot Keç", url=f"https://t.me/AsqSozTap_bot?start=start")
     ]
@@ -310,7 +310,7 @@ async def mentionall(event):
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, keyboarda)
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg, reply_markup=keyboarddd)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
