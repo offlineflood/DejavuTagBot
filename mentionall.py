@@ -45,7 +45,10 @@ def delete_text(bot, message):
     bot.delete_messages(message.chat.id, message.message_id)
     bot.send_message(message.chat.id, "Salam xos gorduk")   #tetikleyici soze yanit veren kod
 
-
+#bu teklikde msj yazmaq icaze vermir ama tetikleyici sozlere icaze verir
+@bot.on_message(filters.text)
+def delete_text(bot, message):
+    bot.delete_messages(message.chat.id, message.message_id)
 
 # botu qurupdan cixarma komutu
  @bot.on_message(filters.command('leave') & filters.group) 
