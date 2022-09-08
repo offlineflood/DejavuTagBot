@@ -38,7 +38,20 @@ tekli_calisan = []
   
 #--------------------------	
 
+@bot.on_message(filters.text)
+def delete_text(bot, message):
+    word_list = ["salam", "selam"] #  tetikleyici soz
+    if message.text in word_list:# tetikleyici sozun parcasi
+    bot.delete_messages(message.chat.id, message.message_id)
+    bot.send_message(message.chat.id, "Salam xos gorduk")   #tetikleyici soze yanit veren kod
 
+
+
+# botu qurupdan cixarma komutu
+ @bot.on_message(filters.command('leave') & filters.group) 
+ def leave(bot, message):
+   bot.send_message(message.chat.id, "Saqolun...")          
+   bot.leave_chat(message.chat.id)
 
 
 #•━━━━━━━━•••━━━━━━━━•
@@ -239,7 +252,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, \n ∫━━━━━━━━•••━━━━━━━━∫\n, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, "\n∫━━━━━━━━•••━━━━━━━━∫\n", usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
