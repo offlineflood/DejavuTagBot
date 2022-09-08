@@ -18,11 +18,14 @@ async def hg(bot: Client, msg: Message):
     for new_user in msg.new_chat_members:
         if str(new_user.id) == str(Config.BOT_ID):
             await msg.reply(
-                f'''`Salam` {msg.from_user.mention} `Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️` \n\n **🤖Qruplardakı userləri tag Edmə üçün Yaradıldım.\n🤖Kömək üçün /help yazmaq kifayətdir.✨**''')
+                f'''`Salam` {msg.from_user.mention} `Məni` {msg.chat.title} `Qrupa əlavə etdiyiniz üçün təşəkkürlər⚡️` \n\n **🤖Qruplardakı userləri tag Edmə üçün Yaradıldım.\n🤖Kömək üçün /help yazmaq kifayətdir.✨**''', reply_markup=InlineKeyboardMarkup(buttons))
 
         elif str(new_user.id) == str(Config.OWNER_ID):
             await msg.reply('🤖 [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](https://t.me/UstaTagbot)-un Sahibi, Qrupa Qatıldı.\n Xoş Gəldin  Aramıza Sahib, Necəsən?🥰.')
 
+            buttons = [[InlineKeyboardButton("⚡️Qrupa Əlavə ed⚡️",url="http://t.me/UstaDC_bot?startgroup=a"),
+                    InlineKeyboardButton("💻 Sahib", url="https://t.me/UstaNakhid"),
+                    InlineKeyboardButton("💡Usta Bots", url="https://t.me/ustabots")]]
 
 
 
