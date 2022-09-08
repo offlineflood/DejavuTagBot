@@ -86,20 +86,22 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.reply(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
-                      Button.url('💡 USTA Bots', 'https://t.me/ustabots')],
+		   # [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	            # [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
+                    #  Button.url('💡 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"📚 Əmrlər", data="help"),
-	              Button.inline(f"📑 Təkliflər", data="reklam")]
+	              Button.inline(f"📑 Təkliflər", data="reklam")],
+	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+                      Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
                     ),
                     link_preview=False)
 
 
   if event.is_group:
-    return await client.send_message(event.chat_id, f"**Bot'un Əmrlər üçün?.Bot'a daxil olub.**", buttons=(
-                     [Button.url('↬Bota Get↫ ','https://t.me/UstaTagbot?start=start')],
-	             [Button.url('💡 USTA Bots','https://t.me/ustabots'),
-		      Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt')],
+    return await client.send_message(event.chat_id, f"** [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)'un Əmrlər üçün?.Bot'a daxil olub.**", buttons=(
+                     [Button.url('💡Bota Keç','https://t.me/UstaTagbot?start=start')],
+	             [Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots'),
+		      Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt')],
                     ),
                     link_preview=False)
 #https://t.me/Ustamusicbot?start=help
@@ -111,33 +113,35 @@ async def handler(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
+		    # [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	             #[Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
+                      #Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"📚 Əmrlər", data="help"),
-	              Button.inline(f"📑 Təkliflər", data="reklam")]
+	              Button.inline(f"📑 Təkliflər", data="reklam")],
+	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+                      Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
                     ),
                     link_preview=False)
 
 # gece kusu
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):	
-    await event.edit(f"** [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**", buttons=(
-	             [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-	             [Button.inline(f"◀️ Geri", data="start")]
+    await event.edit(f"** [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un Kömək '📚 Əmrlər' Bunlardır.⤵**\n\n\n•━━━━━━━━•••━━━━━━━━•\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n•━━━━━━━━•••━━━━━━━━•", buttons=(
+	            # [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
+		     #[Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
+	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+                      Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
+	             [Button.inline(f"🔙 Geri", data="start")]
                     ),
                     link_preview=False)
 
 @client.on(events.callbackquery.CallbackQuery(data="reklam"))
 async def handler(event):	
-    await event.edit(f"**Təkliflər üçün sahib'lə əlaqə saxlaya bilərsiniz.**", buttons=(
+    await event.edit(f"**📌 [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un & 𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍ Təkliflər üçün sahib'lə əlaqə saxlaya bilərsiniz...**", buttons=(
 		     [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
-                      Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-	             [Button.inline(f"◀️ Geri", data="start")]
+	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
+                      Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
+	             [Button.inline(f"🔙 Geri", data="start")]
                     ),
                     link_preview=False)
 
@@ -217,7 +221,7 @@ async def mentionall(event):
         await event.respond("** Tag əməliyyatı uğurla dayandırıldı!**")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -235,7 +239,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, \n ∫━━━━━━━━•••━━━━━━━━∫\n, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -549,7 +553,7 @@ async def tag_admin(event):
     if event.reply_to_msg_id:
         await event.client.send_message(event.chat_id, text, reply_to=event.reply_to_msg_id, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
     else:
-        await event.reply(text)
+        await event.reply(text,  buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
     raise StopPropagation
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -784,8 +788,8 @@ async def handler(event):
         return await event.reply("__Sən mənə sahib deyilsən!__")
     await event.reply('**Bot İşləyir Narahat olmayın** \n https://t.me/DegGixM \n\n╭━━━╮ \n╰╮╭╮┃╱╱╭╮\n╱┃┃┃┣━━╋╋━━┳╮╭┳╮╭╮\n╱┃┃┃┃┃━╋┫╭╮┃╰╯┃┃┃┃\n╭╯╰╯┃┃━┫┃╭╮┣╮╭┫╰╯┃\n╰━━━┻━━┫┣╯╰╯╰╯╰━━╯\n╱╱╱╱╱╱╭╯┃\n╱╱╱╱╱╱╰━╯',
 		     buttons=(
-	             [Button.url('DegGixM','https://t.me/DegGixM')],
-	             [Button.url('Ali','https://t.me/MUCVE_M')],
+	             [Button.url('DegGixM','https://t.me/DegGixM'),
+	             Button.url('Ali','https://t.me/MUCVE_M')],
                     ),
                     link_preview=False)
 
