@@ -37,24 +37,10 @@ anlik_calisan = []
 tekli_calisan = []
   
 #--------------------------	
-
-@client.on_message(filters.text)
-def delete_text(client, message):
-    word_list = ["salam", "selam"] #  tetikleyici soz
-    if message.text in word_list:# tetikleyici sozun parcasi
-    client.delete_messages(message.chat.id, message.message_id)
-    client.send_message(message.chat.id, "Salam xos gorduk")   #tetikleyici soze yanit veren kod
-
-#bu teklikde msj yazmaq icaze vermir ama tetikleyici sozlere icaze verir
-@client.on_message(filters.text)
-def delete_text(client, message):
-    client.delete_messages(message.chat.id, message.message_id)
-
-# botu qurupdan cixarma komutu
-@client.on_message(filters.command('leave') & filters.group) 
- def leave(client, message):
-   client.send_message(message.chat.id, "Saqolun...")          
-   client.leave_chat(message.chat.id)
+@bot.on_message(filters.command('leave') & filters.group) 
+ def leave(bot, message):
+   bot.send_message(message.chat.id, "Saqolun...")          
+   bot.leave_chat(message.chat.id)
 
 
 #•━━━━━━━━•••━━━━━━━━•
