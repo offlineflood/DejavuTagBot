@@ -4,7 +4,8 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
-from Config import Config
+from Config import Config #h
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 #from pyrogram import Client, filters
 
 #from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
@@ -310,7 +311,7 @@ async def mentionall(event):
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
       if usrnum == 5:   #'Qurup🛠', 'https://t.me/Bizim_Paytaxt'
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg   buttons=([Button.inline(f"🙄Təmirdə","https://t.me/Bizim_Paytaxt")]) )
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.inline(f"🙄Təmirdə","https://t.me/Bizim_Paytaxt")]) )
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
