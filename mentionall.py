@@ -7,7 +7,7 @@ from asyncio import sleep
 from Config import Config
 #from pyrogram import Client, filters
 
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+#from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 
 
@@ -244,7 +244,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, reply_markup=keyboarda )
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -309,8 +309,8 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
-      if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, reply_markup=keyboarddd)
+      if usrnum == 5:   #'Qurup🛠', 'https://t.me/Bizim_Paytaxt'
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg   buttons=([Button.inline(f"🙄Təmirdə","https://t.me/Bizim_Paytaxt")]) )
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
