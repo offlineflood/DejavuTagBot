@@ -238,7 +238,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, "\n∫━━━━━━━━•••━━━━━━━━∫\n", usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -285,8 +285,8 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
-      if usrnum == 5:
-        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+      if usrnum == 5:   
+        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -350,8 +350,8 @@ async def mentionall(event):
       if event.chat_id not in tekli_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt} {msg}", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+      if usrnum == 1: 
+        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -518,8 +518,8 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+      if usrnum == 1: 
+        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -702,8 +702,8 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
-      if usrnum == 1:
-        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+      if usrnum == 1: 
+        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
