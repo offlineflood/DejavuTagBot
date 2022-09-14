@@ -29,6 +29,8 @@ bot_name = Config.BOT_NAME
 
 
 SUDO_USERS = Config.SUDO_USERS
+OWNER_ID = Config.OWNER_ID
+
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
