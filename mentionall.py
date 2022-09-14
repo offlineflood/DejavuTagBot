@@ -47,8 +47,8 @@ def get_arg(message):
         return ""
     return " ".join(split[1:])
 
-
-@client.on(events.NewMessage(from_users=OWNER_ID, pattern="^/broadcast$"))
+@client.on(events.NewMessage(pattern="^/broadcast$"))
+#@client.on(events.NewMessage(from_users=OWNER_ID, pattern="^/broadcast$"))
 async def broadcast(client, message):
     to_send = get_arg(message)
     chats = load_chats_list()
