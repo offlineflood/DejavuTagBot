@@ -221,7 +221,7 @@ async def mentionall(event):
         await event.respond("** Tag əməliyyatı uğurla dayandırıldı!**")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -239,7 +239,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -287,7 +287,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 5:   
-        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -304,8 +304,8 @@ async def mentionall(event):
       if event.chat_id not in anlik_calisan:
         await event.respond(" **Tag əməliyyatı uğurla dayandırıldı! **")
         return
-      if usrnum == 5:   #Button.url('💡 USTA Bots', 'https://t.me/ustabots')],  [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+      if usrnum == 5:   
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -352,7 +352,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 1: 
-        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -370,7 +370,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -520,7 +520,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 1: 
-        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -538,7 +538,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -551,9 +551,9 @@ async def tag_admin(event):
     async for x in event.client.iter_participants(chat, 100, filter=ChannelParticipantsAdmins):
         text += f" \n ↯ [{x.first_name}](tg://user?id={x.id})"
     if event.reply_to_msg_id:
-        await event.client.send_message(event.chat_id, text, reply_to=event.reply_to_msg_id, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await event.client.send_message(event.chat_id, text, reply_to=event.reply_to_msg_id)
     else:
-        await event.reply(text,  buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await event.reply(text)
     raise StopPropagation
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -704,7 +704,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! **")
         return
       if usrnum == 1: 
-        await client.send_message(event.chat_id, f"\n∫━━━━━━━━•••━━━━━━━━∫\n{usrtxt}\n\n🗣{msg}💬", buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, f"{usrtxt}\n\n{msg}")
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
@@ -722,7 +722,7 @@ async def mentionall(event):
         await event.respond("**Əməliyyat Uğurla Dayandırıldı! ** ")
         return
       if usrnum == 1:
-        await client.send_message(event.chat_id, usrtxt, reply_to=msg, buttons=([Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻','https://t.me/ustabots')]))
+        await client.send_message(event.chat_id, usrtxt, reply_to=msg)
         await asyncio.sleep(2)
         usrnum = 0
         usrtxt = ""
