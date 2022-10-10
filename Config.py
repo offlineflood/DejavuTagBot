@@ -2,8 +2,8 @@ import os
 
 
 class Config():
-    # Get these values from my.telegram.org
-    # https://my.telegram.org
+    # Bu dəyərləri my.telegram.org saytından əldə edin
+    #>>> https://my.telegram.org
     API_ID = int(os.environ.get("API_ID"))
     API_HASH = os.environ.get("API_HASH")
     BOT_TOKEN = os.environ.get("BOT_TOKEN")
