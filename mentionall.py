@@ -4,13 +4,7 @@ from telethon import TelegramClient, events
 from telethon.sessions import StringSession
 from telethon.tl.types import ChannelParticipantsAdmins
 from asyncio import sleep
-from Config import Config #h
-
-#from pyrogram import Client, filters
-
-#from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-
-
+from Config import Config 
 
 
 logging.basicConfig(
@@ -37,47 +31,10 @@ anlik_calisan = []
 
 tekli_calisan = []
   
-#--------------------------	
 
-
-#•━━━━━━━━•••━━━━━━━━•
 	
 	
 	
-
-#@client.on(events.NewMessage(pattern="^/start$"))
-#async def start(event):
- # await event.reply("sxya kece bilersen ala",
- #                   buttons=(
-#	              [Button.url('sexside start ed', 'https://t.me/UstaTagbot'), 
-  #                    Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-  #                   ),
-  #                  link_preview=False
- #                  )
-	
-
-#@bot.on_message(filters.command('start') & filters.private)
-#@client.on(events.NewMessage(pattern="^/start$") & filters.private)
-#@client.on(events.callbackquery.CallbackQuery(data="start"))
-#async def start(event):
- # await event.reply("**🤖Salam...💭,**\nMənim Adım [USTA Tag Bot](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Əmrlər üçün /help yazıb məndən kömək ala bilərsiniz.**",
-          #          buttons=(
-         #      
-	#	      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-	#	      [Button.inline(f"komek", data="help")], 
-	#	      #[Button.inline("✍ Əmrlər", data="help")],    
-          #            #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
-         #             #[Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
-	#	      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
-   #                   Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-  #                    #[Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
- #                     #[Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
- #                    ),
- #                   link_preview=False
-#                   )
-
-#-----------------------------------------------------------
-
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   if event.is_private:
@@ -85,9 +42,6 @@ async def start(event):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.reply(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		   # [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	            # [Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
-                    #  Button.url('💡 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"📚 Əmrlər", data="help"),
 	              Button.inline(f"📑 Təkliflər", data="reklam")],
 	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
@@ -103,19 +57,15 @@ async def start(event):
 		      Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt')],
                     ),
                     link_preview=False)
-#https://t.me/Ustamusicbot?start=help
 
-#{message.from_user.mention}
-# Başlanğıc Button
+
+
 @client.on(events.callbackquery.CallbackQuery(data="start"))
 async def handler(event):
     async for usr in client.iter_participants(event.chat_id):
      ad = f"[{usr.first_name}](tg://user?id={usr.id}) "
      await event.edit(f"**🤖Salam...💭,**\nMənim Adım [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-u.\n**Qurupunuz'daki  bütün üzvləri tağ etmək səlahiyyətinə sahibəm.\n\n🤖Ətraflı müəlumat üçün '📚Əmrlər' bölməsinə daxil olun.**", buttons=(
                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		    # [Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
-	             #[Button.url('Qurup🛠', 'https://t.me/Bizim_Paytaxt'),
-                      #Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
 	             [Button.inline(f"📚 Əmrlər", data="help"),
 	              Button.inline(f"📑 Təkliflər", data="reklam")],
 	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
@@ -123,12 +73,10 @@ async def handler(event):
                     ),
                     link_preview=False)
 
-# gece kusu
+
 @client.on(events.callbackquery.CallbackQuery(data="help"))
 async def handler(event):	
     await event.edit(f"** [𓆩𓄂𝙰𝚂𝚀🇦🇿 𝑇𝑎𝑔𝑔𝑒𝑟 𝘉𝘰𝘵](http://t.me/UstaTagbot)-un Kömək '📚 Əmrlər' Bunlardır.⤵**\n\n\n•━━━━━━━━•••━━━━━━━━•\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n•━━━━━━━━•••━━━━━━━━•", buttons=(
-	            # [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-		     #[Button.url('🎉 Sahib', 'https://t.me/Nehmedov')],
 	             [Button.url('Qrup💬', 'https://t.me/Bizim_Paytaxt'),
                       Button.url('𝐔𝐒𝐓𝐀 𝐁𝐎𝐓𝐋𝐀𝐑 👨‍💻', 'https://t.me/ustabots')],
 	             [Button.inline(f"🔙 Geri", data="start")]
@@ -144,33 +92,6 @@ async def handler(event):
 	             [Button.inline(f"🔙 Geri", data="start")]
                     ),
                     link_preview=False)
-
-
-
-#333333333------------------------------------------------------
-
-#@client.on(events.callbackquery.CallbackQuery(data="help"))	
-#@client.on(events.NewMessage(pattern="^/help$"))
-#async def help(event):
-#  helptext = "** [USTA Tag Bot](http://t.me/UstaTagbot)-un Kömək Əmrlər Bunlardır...💭,⤵**\n\n**🤖➪ /tag <səbəb> - 5-li Tag Atışları.**\n**🤖➪ /etag <səbəb> - Emoji ilə etiketlər.**\n**🤖➪ /stag <səbəb> - Söz'lü Tag etiketlər.**\n**🤖➪ /tektag <səbəb> - Üzvləri Tək-Tək etiketlər.**\n**🤖➪ /usta <səbəb> - usta Tag Bot'una aid Tag etiketlər.**\n**🤖➪ /admins <səbəb> - İdarəçilər Tək-Tək etiketlər.**\n**🤖➪ /cancel - Tag Ələməyi Dayandır.**\n**🤖➪ /start - Botu işə salır**\n**🤖➪ /reklam - Reklam və ya əməkdaşlıq üçün bu əmrdən istifadə edin.**"
-#  await event.reply(helptext,
-#                    buttons=(
-#                      [Button.url('➕ Məni Qrupa əlavə et ➕','http://t.me/UstaTagbot?startgroup=a')],
-#                      #[Button.url('Qurup🛠', 'https://t.me/kohne_mekan')],
-#                     # [Button.url('Kanal📢', 'https://t.me/kohne_mekan_kanal')],
-#		      [Button.url('🎉 Sahib', 'https://t.me/UstaNakhid'),
-#                       Button.url('🤖 USTA Bots', 'https://t.me/ustabots')],
-#		      [Button.inline("◀️ Geri", data="start")],
-#                     # [Button.url('➕ K.M Music Bot ➕','http://t.me/KohneMekanMusicBot?startgroup=a')],
-#                    #  [Button.url('➕ K.M Nəzarət Bot ➕','http://t.me/KohneMekanNezaretBot?startgroup=a')],
-#                   ),
-#                    link_preview=False
-#                   )
-#	
-	
-	
-	
-	
 	
     
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
@@ -178,8 +99,6 @@ async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
 
-
-# emoji = "🐵 🦁 🐯 🐱 🐶 🐺 🐻 🐨 🐼 🐹 🐭 🐰 🦊 🦝 🐮 🐷 🐽 🐗 🦓 🦄 🐴 🐸 🐲 🦎 🐉 🦖 🦕 🐢 🐊 🐍 🐁 🐀 🐇 🐈 🐩 🐕 🦮 🐕‍🦺 🐅 🐆 🐎 🐖 🐄 🐂 🐃 🐏 🐑 🐐 🦌 🦙 🦥 🦘 🐘 🦏 🦛 🦒 🐒 🦍 🦧 🐪 🐫 🐿️ 🦨 🦡 🦔 🦦 🦇 🐓 🐔 🐣 🐤 🐥 🐦 🦉 🦅 🦜 🕊️ 🦢 🦩 🦚 🦃 🦆 🐧🦈 🐬 🐋 🐳 🐟 🐠 🐡 🦐 🦞 🦀 🦑 🐙 🦪 🦂 🕷️ 🦋 🐞 🐝 🦟 🦗 🐜 🐌 🐚 🕸️ 🐛 🐾 😀 😃 😄 😁 😆 😅 😂 🤣 😭 😗 😙 😚 😘 🥰 😍 🤩 🥳 🤗 🙃 🙂 ☺️ 😊 😏 😌 😉 🤭 😶 😐 😑 😔 😋 😛 😝 😜 🤪 🤔 🤨 🧐 🙄 😒 😤 😠 🤬 ☹️ 🙁 😕 😟 🥺 😳 😬 🤐 🤫 😰 😨 😧 😦 😮 😯 😲 😱 🤯 😢 😥 😓 😞 😖 😣 😩 😫 🤤 🥱 😴 😪 🌛 🌜 🌚 🌝 🌞 🤢 🤮 🤧 🤒 🍓 🍒 🍎 🍉 🍑 🍊 🥭 🍍 🍌 🌶 🍇 🥝 🍐 🍏 🍈 🍋 🍄 🥕 🍠 🧅 🌽 🥦 🥒 🥬 🥑 🥯 🥖 🥐 🍞 🥜 🌰 🥔 🧄 🍆 🧇 🥞 🥚 🧀 🥓 🥩 🍗 🍖 🥙 🌯 🌮 🍕 🍟 🥨 🥪 🌭 🍔 🧆 🥘 🍝 🥫 🥣 🥗 🍲 🍛 🍜 🍢 🥟 🍱 🍚 🥡 🍤 🍣 🦞 🦪 🍘 🍡 🥠 🥮 🍧 🍧 
 
 emoji = "😀 🐵 🍓 😃 🦁 🍒 😄 🐯 🍎 😁 🐱 🍉 😆 🐶 🍑 😅 🐺 🍊 😂 🐻 🥭 🤣 🐨 🍍 😭 🐼 🍌 😗 🐹 🌶 😙 🐭 🍇 😚 🐰 🥝 😘 🦊 🍐 🥰 🦝 🍏 🤩 🐮 🍈 🥳 🐷 🍋 🤗 🐽 🍄 🙃 🐗 🥕 🙂 🦓 🍠 ☺️ 🦄 🧅 😊 🐴 🌽 😏 🐸 🥦 😌 🐲 🥒 😉 🦎 🥬 🤭 🐉 🥑 😶 🦖 🥯 😐 🦕 🥖 😑 🐢 🥐 😔 🐊 🍞 😋 🐁 🌰 😛 🐀 🥔 😝 🐇 🧄 😜 🐈 🍆 🤪 🐩 🧇 🤔 🐕 🥞 🤨 🦮 🥚 🧐 🐕‍🦺 🧀 🙄 🐅 🥓 😒 🐆 🥩 😤 🐎 🍗 😠 🐖 🍖 🤬 🐄 🥙 ☹️ 🐂 🌯 🙁 🐃 🌮 😕 🐏 🍕 😟 🐑 🍟 🥺 🐐 🥨 😳 🦌 🥪 😬 🦙 🌭 🤐 🦥 🍔 🤫 🦘 🧆 😰 🐘 🥘 😨 🦏 🍝 😧 🦛 🥫 😦 🦒 🥣 😮 🐒 🥗 😯 🦍 🍲 😲 🦧 🍛 😱 🐪 🍜 🤯 🐫 🍢 😢 🐿️ 🥟 😥 🦨 🍱 😓 🦡 🍚 😞 🦔 🥡 😖 🦦 🍤 😣 🦇 🍣 😩 🐓 🦞 😫 🐔 🦪 🤤 🐣 🍘 🥱 🐤 🍡 😴 🐥 🥠 😪 🐦 🥮 🤢 🦉 🍧 🤮 🦅 🍨 🤧 🦜 🍫 🤒 🪱 🍪 😶‍🌫 🕊️ 🥜 🤠 🦢 🍭 🤑 🦩 🧈 🤤 🦃 🦚 🥵 🦆 🫑 🥶 🐧 🍥 🥸 🦈 🍦 🤓 🐳 🍳 😇 🐝 🥧 🤭 🐌 🥤 🤫 🦋 🍨".split(" ")
   
@@ -434,14 +353,12 @@ stag = (
 "Məzarlıq, əsəb  uğruna peşman olanlarla dolu",
 "Eşq külək  kimidir görməzsən ama hiss edə bilərsən.",
 "tərəzi  var ölçü var , hərşeyin bir vaxtı var",
-
 "Yanıltmasın səni masum baxışlar, bəzılarını şeytan ayaqdə alqışlar...",
 "həyat sabahı gözləyəcək qədər uzun deyil",
 "Yaxşılar əsla itirməz , itirilir.",
 "görməzden gəldiyin sevgiyə möhtac qalman diləyiylə",
 "Kaşki ağıl vermək yerinə hüzur versəniz",
 "Heç bilmədiyim o qoxunu çox özləyirəm",
-    #Mfmf
 "𝑌𝑎𝑥𝑠̧𝚤 𝑜𝑙𝑎𝑛 𝑖𝑡𝑖𝑟𝑠𝑒𝑑𝑒 𝑞𝑎𝑧𝑎𝑛ı𝑟",
 "𝐴ş𝑖𝑞 𝑜𝑙𝑚𝑎𝑞 𝑔𝑜̈𝑧ə𝑙 𝑏𝑖𝑟 ş𝑒𝑦 𝑎𝑚𝑎 𝑠𝑎𝑑ə𝑐ə 𝑠ənə",
 "𝐻𝑒𝑐̧𝑘𝑖𝑚 ℎ𝑒𝑐̧𝑘𝑖𝑚𝑖 𝑖𝑡𝑖𝑟𝑚𝑒𝑧  𝑔𝑖𝑑ə𝑛 𝑏𝑎ş𝑞𝑎𝑠ı𝑛ı 𝑡𝑎𝑝𝑎𝑟, 𝑞𝑎𝑙𝑎𝑛 𝑜̈𝑧𝑢̈𝑛𝑢̈",
@@ -556,109 +473,6 @@ async def tag_admin(event):
         await event.reply(text)
     raise StopPropagation
 
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------#
-
-#@client.on(events.NewMessage(pattern="^/admins|/admin|@admin|@admins ?(.*)"))
-#async def _(event):
- #   chat_id = event.chat_id
-  #  if event.is_private:
-   #     return await event.respond("sᴏʀʀʏ ʏᴏᴜ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ᴀᴅᴍɪɴ ᴏɴʟʏ ɪɴ ɢʀᴏᴜᴘ")
-
-    #is_admin = False
-    #try:
-     #   partici_ = await client(GetParticipantRequest(event.chat_id, event.sender_id))
-    #except UserNotParticipantError:
-     #   is_admin = False
-    #else:
-     #   if isinstance(
-      #      partici_.participant, (ChannelParticipantAdmin, ChannelParticipantCreator)
-       # ):
-    #        is_admin = True
-   # if not is_admin:
-     #   return await event.respond("ᴏɴʟʏ ᴀᴅᴍɪɴ ᴄᴀɴ ᴍᴇɴᴛɪᴏɴ ɢʀᴏᴜᴘ ᴀᴅᴍɪɴs")
-
-   # if event.pattern_match.group(1) and event.is_reply:
-    #    return await event.respond("ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ")
-    #elif event.pattern_match.group(1):
-     #   mode = "text_on_cmd"
-      #  msg = event.pattern_match.group(1) 
-    #elif event.is_reply:
-     #   mode = "text_on_reply"
-      #  msg = await event.get_reply_message()
-       # if msg == None:
- #           return await event.respond(
-  #              "__ɪ ᴄᴀɴ'ᴛ ᴍᴇɴᴛɪᴏɴ ᴍᴇᴍʙᴇʀs ꜰᴏʀ ᴏʟᴅᴇʀ ᴍᴇssᴀɢᴇs! (ᴍᴇssᴀɢᴇs ᴡʜɪᴄʜ ᴀʀᴇ sᴇɴᴛ ʙᴇꜰᴏʀᴇ ɪ'ᴍ ᴀᴅᴅᴇᴅ ᴛᴏ ɢʀᴏᴜᴘ)__"
-   #         )
-    #else:
-     #   return await event.respond(
-      #      "__ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴍᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴏᴛʜᴇʀs!__"
-       # )
-
-    #spam_chats.append(chat_id)
-    #usrnum = 0
-    #usrtxt = ""
-    #chat = await event.get_input_chat()
-    #async for x in client.iter_participants(chat, filter=ChannelParticipantsAdmins):
-     #   if not chat_id in spam_chats:
-      #      break
-       # usrnum += 1
-        #usrtxt += f" \n [{x.first_name}](tg://user?id={x.id})"
-        #if usrnum == 5:
-         #   if mode == "text_on_cmd":
-          #      txt = f"{usrtxt}\n\n{msg}"
-           #     await client.send_message(chat_id, txt)
-         #   elif mode == "text_on_reply":
-        #        await msg.reply(usrtxt)
-       #      usrnum = 0
-     #       usrtxt = ""
-    #try:
-     #   spam_chats.remove(chat_id)
-    #except:
-        #pass
-
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------#
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------#
-
-
-#@client.on(events.NewMessage(pattern="^/admins ?(.*)"))
-#async def mentionall(tagadmin):
-
- #if tagadmin.pattern_match.group(1):
- # seasons = tagadmin.pattern_match.group(1)
- #else:
- # seasons = ""
-
- #chat = await tagadmin.get_input_chat()
- #a_=0
- #await tagadmin.delete()
-# async for i in client.iter_participants(chat, filter=cp):
-#  if a_ == 500:
-  # break
-#  a_+=5
- # await tagadmin.client.send_message(tagadmin.chat_id, "{} {}".format(i.first_name, i.id, seasons))
- # sleep(0.5)
-
 
 @client.on(events.NewMessage(pattern='^(?i)/cancel'))
 async def cancel(event):
@@ -729,57 +543,6 @@ async def mentionall(event):
 
 usta = ('Buda kimmiş də miş miş👀😁😍','🙄👉🤲Aağil','🙄 Sən dediyim sözü elədin? 😐','Həyatımın dolması 🥲 nassın😍','Mənə niyə elə baxırsan? 🌝','İkinci planda olmaqdansa, plana daxil olmamağı seçərəm.  🎯','səni basqa qrublardada görmüsdüm ','Ac olanda sən o sən deyilsən','Niyə yalan danışırsan adamın üstündə patalok var','Həci necəsən ficuuu ','köhnə məkanın yeni sakini ','günün günnən durdun uzax de görüm haramı bəyənmədin','deyrlər ölübsən🤔','Güçlüyüm... Çünkü başka seçeneğim yok düşersem tutanım olmayacak biliyorum...🚬','gəl bir birimizi arka sokaklar bitənə qədər sevək❤️','corona belə böyüdü sən böyümədin','corona belə unduldu səni unuda bilmədim🚬','səni sevirəm sözündə neçə dənə samit var','oğlanlar niyə az yaşayır','bitkilər yaşlandıqcamı ölər yoxsa baxımsızlıqdanmı','isti havada çay içirsən hələdə','allah rəhmət eləsin','tez gəlin hədiyyəli yarışımız basladı','Benim hayelerim kelebeğin ömrü kadar yaşar 💔🥀','Çiçəklərə aşağıdan baxmağa gedirəm..➰','susмuş вir qadın üçün... вiтмiş вir adaмsan.! 🖤','𝚂ə𝚏𝚕ə𝚛𝚒𝚗𝚒 𝚞̈𝚣𝚕ə𝚛𝚒𝚗ə 𝚟𝚞𝚛𝚖𝚊𝚍𝚒𝚐̆𝚒𝚖𝚒𝚣 𝚞̈𝚌̧𝚞̈𝚗 𝚘̈𝚣𝚕𝚎𝚛𝚒𝚗𝚒 𝚚𝚞̈𝚜𝚞𝚛𝚜𝚞𝚣 𝚜𝚊𝚗𝚊𝚗 𝚒𝚗𝚜𝚊𝚗𝚕𝚊𝚛 𝚟𝚊𝚛😒','Güclü olmağa məndən daha çox ehtiyacın var, çünki haqsız olduğunu ürəyinin bir yerində bilirsən.🤙','Makiyaj və üz boyalarınıza güvənməyin. Yollar da gözəldir, lakin altından kanalizasiya keçir.👋😉','𝙸̇𝚝𝚒𝚛𝚍𝚒𝚢𝚒𝚗 𝚟𝚊𝚡𝚝𝚒 𝚚𝚊𝚢𝚝𝚊𝚛𝚊 𝚋𝚒𝚕𝚖ə𝚍𝚒𝚢𝚒𝚗 𝚔𝚒𝚖𝚒 𝚎𝚕ə𝚍𝚒𝚢𝚒𝚗 𝚙𝚒𝚜𝚕𝚒𝚢𝚒 𝚍ə 𝚑𝚎𝚌̧ 𝚟𝚊𝚡𝚝 𝚍𝚞̈𝚣ə𝚕𝚍ə 𝚋𝚒𝚕𝚖𝚎𝚢ə𝚌𝚎𝚔𝚜ən😐','𝙱𝚒𝚛𝚊𝚣 𝚒𝚗𝚜𝚊𝚗 𝚘𝚕 𝚍𝚎𝚢e𝚌ə𝚖 𝚊𝚖𝚖𝚊 𝚜ə𝚗𝚒 𝚍ə 𝚌̧ə𝚝𝚒𝚗 𝚟ə𝚣𝚒𝚢𝚢ə𝚝𝚍ə 𝚚𝚘𝚢𝚖𝚊𝚐̆ 𝚒𝚜𝚝ə𝚖𝚒𝚛ə𝚖🤧','İnsanlığa dəvət etdikdə yolu soruşan insanlar var.🔥😂','Qoyduğum şeyləri öz yerində tapa bilmirəm. Bəzilərini adam yerinə qoydum, indi gəl tap görün necə tapırsan✊','Ayə biri bunu aparsın🫢','Əgər bu həyatda öz tayını tapa bilmirsənsə üzülmə, deməli sən tayı bərabəri olmayan birisən.Qabriel Qarsia Markuez (Meksikalı yazıçı)🥲','Xoş Gəldim Nəfəs🥲','Gəlmirsən Balaca😒','Kimə Yazısan??? 🤨','Çirkin Çocuq Gəl😌','Cikolatam😍','Aaa Səndə Burdasan😳','Al Sənə Çikolata🤓👉🍫','Sevmirsən Məni?🙁 Onda Ol🙂','Haa Düz derisən?🧐','Bu Kimdir😁','Gəl Dava Edəx😁💪','Bax Sənə Nə Aldım😌👉🐒','Nə Gözəlsən🤢 Çirkin Ördək Yavrusu','Sən Kimsən🙄A Gədə👀','Gəl Sənə Sürpürüzüm var🤫','Ooo Çox Gözəlsin🤌🤐Bal','Şəxsiyə Yaz😌dünbələx','Gəl Görüm Hələ🧐 Nə demisən Mənə😬','Ayib Olsun😫 Niyə Yazmırsan😑','Bezdim Səndən🥲','Bu Neçədir✌️🙂','Nömrəni ver də Vpda yazışa🙊','👉👀 Gözün Çıxsın gəl😒','ımmm Gəl yogo yapalım🧘‍♀🤭','gəl sənə bıra süzdüm😪🍻','Ağlımı Başımdan ala şəxs😵‍💫gəl mənə doğru','Səni gördüm qızmam qalxdə🤒',) 
 
-#@app.on_message(
-   #     filters.command("broadcast") & filters.user(SUDO_USERS)
-   # )
-   # async def broadcast_func(_, message: Message):
-      #  if db is None:
-       #     return await message.reply_text(
-     #           "MONGO_DB_URI var müəyyən edilməyib. Zəhmət olmasa əvvəlcə onu müəyyənləşdirin"
-       #     )
-       # if message.reply_to_message:
-       #     x = message.reply_to_message.message_id
-     #       y = message.chat.id
-    #    else:
-     #       if len(message.command) < 2:
-      #          return await message.reply_text(
-       #             "**İstifadə**:\n/broadcast [MESSAGE] və ya [Mesajı Cavab]"
-      #          )
-       #     query = message.text.split(None, 1)[1]
-
-      #  susr = 0
-    #    served_users = []
-     #   susers = await mongo.get_served_users()
-     #   for user in susers:
-      #      served_users.append(int(user["user_id"]))
-    #    for i in served_users:
-       #     try:
-       #         await app.forward_messages(
-        #            i, y, x
-        #        ) if message.reply_to_message else await app.send_message(
-        #            i, text=query
-       #         )
-      #          susr += 1
-        #    except FloodWait as e:
-         #       flood_time = int(e.x)
-          #      if flood_time > 200:
-         #           continue
-          #      await asyncio.sleep(flood_time)
-          #  except Exception:
-       #         pass
-      #  try:
-     #       await message.reply_text(
-       #         f"**Mesajı yayımlayın {susr} İstifadəçilər.**"
-      #      )
-       # except:
-       #     pass
-
-
-
-
-
-
-
 
 @client.on(events.NewMessage(pattern='/offline'))
 async def handler(event):
@@ -792,15 +555,6 @@ async def handler(event):
 	             Button.url('Ali','https://t.me/MUCVE_M')],
                     ),
                     link_preview=False)
-
-	
-	
-     
-#@client.on(events.NewMessage(pattern='/reklam'))
-#async def handler(event):	
- #    await event.reply('🤖 [USTA Tag Bot](http://t.me/UstaTagbot)-unda Reklam Almaq Üzçün [ɴᴀᴋʜɪᴅ ᴜsᴛᴀ ¦ 🇧🇻🦅](https://t.me/UstaNakhid)-ilə Әlaqә Saxlayın.')
-    
-
 
 print(">> Bot işləyir narahat olmayın. @MUCVE_M Məlumat almaq üçün <<")
 client.run_until_disconnected()
