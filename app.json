@@ -1,47 +1,47 @@
 {
-  "name": "Telegram Mention TaggerBot",
-  "logo":"https://telegra.ph/file/dfa517fd00b6ca5f7ac9.jpg",
-  "description": "User tagger bot sıze ucretsız uyelerınızı etıketleyen bı bottur.",
+  "name": "User Tag Bot",
+  "logo":"https://te.legra.ph/file/46d967d7f0ea366f7f6f3.jpg",
+  "description": "İstifadəçi tagger botu pulsuz üzvlərinizi etiketləyən bir botdur.",
   "env": {
     "BOT_TOKEN": {
-      "description": "bot token girin.",
-      "value": "57898Ta0ysiY"
+      "description": "Botfather-dən Bot nişanı.",
+      "value": "bəbə"
     },
     "API_ID": {
-      "description": "@otomytelegrambot dan api hash api id alınız.",
-      "value": "8173444"
+      "description": "Bu dəyəri https://my.telegram.org saytından əldə edin.",
+      "value": "bəbə"
     },
     "API_HASH": {
-      "description": "@otomytelegrambot dan api hash api id alınız.",
-      "value": "8ce53801c1b49cd4d2fa108eb151b255"
+      "description": "Bu dəyəri https://my.telegram.org saytından əldə edin.",
+      "value": "bəbə"
     },
     "BOT_NAME": {
-      "description": "botun adını girin.",
-      "value": "bebe"
+      "description": "User Tag Botunuz üçün ad. Zəhmət olmasa ascii simvollarından istifadə etməyin.",
+      "value": "bəbə"
     },
     "BOT_USERNAME": {
-      "description": "botun adresini girin.",
-      "value": "bebe"
+      "description": "Botun ünvanını daxil edin.",
+      "value": "bəbə"
     },
     "BOT_ID": {
-      "description": "botun id'sini girin.",
-      "value": "5789800986"
+      "description": "Botun id-sini daxil edin.",
+      "value": "bəbə"
     },
     "SUDO_USERS": {
-      "description": "botun sahibini girin.",
-      "value": "1280040987"
+      "description": "Botun sahibini daxil edin.",
+      "value": "bəbə"
     },
     "SUPPORT_CHAT": {
-      "description": "botun destek grubunu girin.",
-      "value": "bebe"
+      "description": "Botun dəstək qrupuna daxil olun.",
+      "value": "bəbə"
     },
     "OWNER_ID": {
-      "description": "botun sahibinin id'sini girin.",
-      "value": "1980683964"
+      "description": "SAHİBİ olarak eklemek istediğiniz kullanıcı(lar)ın kullanıcı kimlikleri. Çoklu değerler bir boşluk ile ayrılmalıdır.",
+      "value": "bəbə"
     },
     "OWNER_USERNAME": {
-      "description": "botun sahibinin adresini girin.",
-      "value": "1980683964"
+      "description": "Botun sahibinin ünvanını daxil edin.",
+      "value": "bəbə"
     }
   },
   "buildpacks": [{
