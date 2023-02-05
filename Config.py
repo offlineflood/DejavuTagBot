@@ -6,7 +6,7 @@ class Config():
     #>>> https://my.telegram.org
     API_ID = int(os.environ.get("API_ID","8173444"))
     API_HASH = os.environ.get("API_HASH","8ce53801c1b49cd4d2fa108eb151b255")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN","5337183930:AAEQc8pbjleTSxzyjtS_GHYWfeVvcy4pEKo")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN","6152708456:AAF2xfhqFeUEVzB01pHVWKbzyTmewczaUys")
     BOT_USERNAME = os.environ.get("BOT_USERNAME","sjashaic")
     BOT_NAME = os.environ.get("BOT_NAME","asjcioac")
     BOT_ID = int(os.environ.get("BOT_ID","1234567890-"))
